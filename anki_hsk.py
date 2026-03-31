@@ -133,10 +133,10 @@ def import_deck(fmt):
                 if nid:
                     original[nid] = r
 
-    updated = 0
+    # Separate into updates vs adds, skip unchanged
+    to_update = []   # (note_id, fields, tags)
+    to_add = []      # (model_name, fields, tags)
     skipped = 0
-    added = 0
-    errors = []
 
     for r in records:
         note_id = r.get("noteId")
@@ -146,7 +146,6 @@ def import_deck(fmt):
         model_name = r["modelName"]
 
         if note_id:
-            # Check if anything changed
             orig = original.get(note_id)
             if orig:
                 orig_tags = orig["tags"] if isinstance(orig["tags"], list) else orig["tags"].split(";")
@@ -154,37 +153,78 @@ def import_deck(fmt):
                 if orig["fields"] == fields and orig_tags == sorted(tags):
                     skipped += 1
                     continue
-
-            # Update existing note
-            try:
-                anki_request("updateNoteFields", note={
-                    "id": note_id,
-                    "fields": fields,
-                })
-                # Sync tags: clear and re-add
-                existing = anki_request("getNoteTags", note=note_id)
-                if existing:
-                    anki_request("removeTags", notes=[note_id], tags=" ".join(existing))
-                if tags:
-                    anki_request("addTags", notes=[note_id], tags=" ".join(tags))
-                updated += 1
-            except RuntimeError as e:
-                errors.append(f"Update noteId={note_id}: {e}")
+            to_update.append((note_id, fields, tags))
         else:
-            # Add as new note
-            try:
-                anki_request("addNote", note={
-                    "deckName": DECK_NAME,
-                    "modelName": model_name,
-                    "fields": fields,
-                    "tags": tags,
-                    "options": {"allowDuplicate": False},
-                })
-                added += 1
-            except RuntimeError as e:
-                errors.append(f"Add new note ({fields}): {e}")
+            to_add.append((model_name, fields, tags))
 
-    print(f"Import complete: {updated} updated, {added} added, {skipped} unchanged (skipped).")
+    print(f"Found {len(to_update)} to update, {len(to_add)} to add, {skipped} unchanged.")
+
+    # ── Batch update fields ──────────────────────────────────────────────
+    errors = []
+    BATCH = 50
+    if to_update:
+        print(f"Updating fields in batches of {BATCH}...")
+        for i in range(0, len(to_update), BATCH):
+            batch = to_update[i:i+BATCH]
+            actions = [{"action": "updateNoteFields", "params": {"note": {"id": nid, "fields": flds}}}
+                       for nid, flds, _ in batch]
+            results = anki_request("multi", actions=actions)
+            for j, res in enumerate(results):
+                if isinstance(res, dict) and res.get("error"):
+                    errors.append(f"Update noteId={batch[j][0]}: {res['error']}")
+            print(f"  fields: {min(i+BATCH, len(to_update))}/{len(to_update)}")
+
+    # ── Batch sync tags ──────────────────────────────────────────────────
+    if to_update:
+        all_update_ids = [nid for nid, _, _ in to_update]
+
+        # Collect all possible tags to remove in one call
+        all_tags_set = set()
+        for _, _, tags in to_update:
+            all_tags_set.update(tags)
+        for nid in all_update_ids:
+            orig = original.get(nid)
+            if orig:
+                ot = orig["tags"] if isinstance(orig["tags"], list) else orig["tags"].split(";")
+                all_tags_set.update(t for t in ot if t)
+
+        # Remove all known tags from updated notes in one call
+        if all_tags_set:
+            print("Clearing old tags...")
+            anki_request("removeTags", notes=all_update_ids, tags=" ".join(all_tags_set))
+
+        # Group notes by their target tag set, then addTags per group
+        from collections import defaultdict
+        tag_groups = defaultdict(list)
+        for nid, _, tags in to_update:
+            tag_groups[tuple(sorted(tags))].append(nid)
+
+        print(f"Setting new tags ({len(tag_groups)} unique tag sets)...")
+        for tag_tuple, nids in tag_groups.items():
+            if tag_tuple:
+                anki_request("addTags", notes=nids, tags=" ".join(tag_tuple))
+
+    updated = len(to_update) - sum(1 for e in errors if "Update " in e)
+
+    # ── Add new notes (batched) ──────────────────────────────────────────
+    added = 0
+    if to_add:
+        print(f"Adding {len(to_add)} new notes...")
+        for i in range(0, len(to_add), BATCH):
+            batch = to_add[i:i+BATCH]
+            actions = [{"action": "addNote", "params": {"note": {
+                "deckName": DECK_NAME, "modelName": mn, "fields": flds,
+                "tags": tgs, "options": {"allowDuplicate": False},
+            }}} for mn, flds, tgs in batch]
+            results = anki_request("multi", actions=actions)
+            for j, res in enumerate(results):
+                if isinstance(res, dict) and res.get("error"):
+                    errors.append(f"Add new note: {res['error']}")
+                else:
+                    added += 1
+            print(f"  added: {min(i+BATCH, len(to_add))}/{len(to_add)}")
+
+    print(f"\nImport complete: {updated} updated, {added} added, {skipped} unchanged (skipped).")
     if errors:
         print(f"{len(errors)} error(s):")
         for err in errors:
