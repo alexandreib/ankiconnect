@@ -91,6 +91,56 @@ def check_similar_definitions(chinese, english, def_index):
     return similar
 
 
+def differentiate_definition(chinese, current_english, alts, other_english_set):
+    """Rebuild a definition preferring alternatives that don't appear in other_english_set.
+
+    other_english_set: set of definition_words from the conflicting card(s).
+    Returns a new English string, or the original if no improvement found.
+    """
+    if not alts:
+        return current_english
+
+    other_words = set()
+    for eng in other_english_set:
+        other_words |= definition_words(eng)
+
+    # Split current definition parts
+    current_parts = [p.strip() for p in current_english.split(",")]
+    primary = current_parts[0]
+
+    # Score alternatives: prefer ones whose words DON'T overlap with the other card
+    def uniqueness(alt):
+        alt_words = definition_words(alt)
+        if not alt_words:
+            return 0
+        unique = sum(1 for w in alt_words if w not in other_words)
+        return unique / len(alt_words)
+
+    # Collect unique alternatives not already in current definition
+    current_lower = {p.strip().lower() for p in current_parts}
+    unique_alts = []
+    for alt in alts:
+        if alt.strip().lower() not in current_lower and uniqueness(alt) > 0:
+            unique_alts.append(alt)
+
+    # Sort by uniqueness score (most unique first)
+    unique_alts.sort(key=uniqueness, reverse=True)
+
+    if not unique_alts:
+        return current_english
+
+    # Rebuild: primary + up to 3 best unique alternatives
+    parts = [primary]
+    seen = {primary.lower().strip()}
+    for alt in unique_alts:
+        if alt.lower().strip() not in seen:
+            seen.add(alt.lower().strip())
+            parts.append(alt)
+            if len(parts) >= 4:
+                break
+    return ", ".join(parts)
+
+
 def load_backup_note_ids():
     """Load noteIds from backup file to determine existing vs new words."""
     try:
@@ -103,13 +153,14 @@ def load_backup_note_ids():
 
 def main():
     parser = argparse.ArgumentParser(description="Clean up myhsk1_data.json")
-    parser.add_argument("--mode", choices=["translation", "tags", "all"], default="all",
-                        help="What to update: translation, tags, or all (default: all)")
+    parser.add_argument("--mode", choices=["translation", "retranslate", "tags", "all"], default="all",
+                        help="What to update: translation (enrich short), retranslate (replace all), tags, or all (default: all)")
     parser.add_argument("--scope", choices=["new", "existing", "all"], default="all",
                         help="Which words to process: new, existing, or all (default: all)")
     args = parser.parse_args()
 
-    do_translation = args.mode in ("translation", "all")
+    do_translation = args.mode in ("translation", "retranslate", "all")
+    do_retranslate = args.mode == "retranslate"
     do_tags = args.mode in ("tags", "all")
     records = load_deck_records()
     pos_cache = load_pos_cache()
@@ -133,14 +184,20 @@ def main():
         else:  # new
             return note_id not in backup_ids
 
+    def is_lesson(record):
+        return "lesson" in record.get("tags", [])
+
     scoped_count = sum(1 for r in records if in_scope(r))
+    lesson_count = sum(1 for r in records if is_lesson(r))
     print(f"  Mode: {args.mode} | Scope: {args.scope} — {scoped_count}/{len(records)} notes selected")
+    if lesson_count:
+        print(f"  Skipping field changes for {lesson_count} lesson-tagged card(s)")
 
     # ── Step 1: Apply fixes.json ─────────────────────────────────────────
     fixes = load_fixes()
     fixes_applied = 0
     for r in records:
-        if not in_scope(r):
+        if not in_scope(r) or is_lesson(r):
             continue
         zh = r["fields"].get("中文", "")
         if zh in fixes:
@@ -153,7 +210,7 @@ def main():
     # ── Step 2: Strip (1 char) from English ──────────────────────────────
     stripped = 0
     for r in records:
-        if not in_scope(r):
+        if not in_scope(r) or is_lesson(r):
             continue
         eng = r["fields"].get("English", "")
         new_eng = re.sub(r"\s*[（(]1\s*char[)）]", "", eng).strip()
@@ -161,35 +218,45 @@ def main():
             r["fields"]["English"] = new_eng
             stripped += 1
 
-    # ── Step 3: POS lookup + enrich short definitions ──────────────────
+    # ── Step 3: POS lookup + translate/enrich definitions ─────────────
     total = len(records)
     fetched = 0
     tags_changed = 0
     enriched = 0
+    retranslated = 0
     for i, r in enumerate(records, 1):
         chinese = r["fields"].get("中文", "")
         eng = r["fields"].get("English", "")
         scoped = in_scope(r)
-        needs_enrich = (do_translation and scoped and eng
-                        and "," not in eng and len(eng.split()) <= 3)
+        lesson = is_lesson(r)
+        needs_retranslate = do_retranslate and scoped and not lesson and chinese
+        needs_enrich = (do_translation and not do_retranslate and scoped and not lesson
+                        and eng and "," not in eng and len(eng.split()) <= 3)
 
-        if chinese in pos_cache and not needs_enrich:
-            # POS cached & definition doesn't need enriching — skip API call
+        if chinese in pos_cache and not needs_enrich and not needs_retranslate:
+            # POS cached & definition doesn't need work — skip API call
             pos_tags = pos_cache[chinese]
         else:
             # Full API call: get POS + alternatives in one request
             try:
-                _t_eng, _pin, pos_tags, alts = google_translate(chinese)
+                gt_eng, _pin, pos_tags, alts = google_translate(chinese)
             except RuntimeError as e:
                 print(f"  ✗ {e}")
                 pos_tags = pos_cache.get(chinese, [])
+                gt_eng = ""
                 alts = []
             if chinese not in pos_cache:
                 pos_cache[chinese] = pos_tags
                 fetched += 1
                 time.sleep(0.3)
-            # Enrich short definitions with alternatives
-            if needs_enrich and alts:
+            # Retranslate: replace entire definition with fresh Google Translate
+            if needs_retranslate and gt_eng:
+                new_eng = build_definition(gt_eng, alts)
+                if new_eng != eng:
+                    r["fields"]["English"] = new_eng
+                    retranslated += 1
+            # Enrich: only extend short definitions with alternatives
+            elif needs_enrich and alts:
                 new_eng = build_definition(eng, alts)
                 if new_eng != eng:
                     r["fields"]["English"] = new_eng
@@ -217,12 +284,21 @@ def main():
 
     save_pos_cache(pos_cache)
 
-    # ── Step 4b: Check for similar definitions ───────────────────────────
+    # ── Step 4b: Auto-fix similar definitions ──────────────────────────
     similarity_warnings = []
+    similarity_fixed = 0
     if do_translation:
         print("\n  Checking for similar definitions...")
         def_index = build_definition_index(records)
         seen_pairs = set()
+
+        # Build a lookup: chinese -> record
+        zh_to_record = {}
+        for r in records:
+            zh = r["fields"].get("中文", "")
+            if zh:
+                zh_to_record[zh] = r
+
         for r in records:
             if not in_scope(r):
                 continue
@@ -238,9 +314,43 @@ def main():
                     similarity_warnings.append((chinese, english, other_zh, other_eng))
 
         if similarity_warnings:
-            print(f"\n  ⚠ {len(similarity_warnings)} similar definition(s) found:")
+            print(f"\n  ⚠ {len(similarity_warnings)} similar definition pair(s) — auto-fixing...")
             for zh1, eng1, zh2, eng2 in similarity_warnings:
-                print(f"    {zh1} ({eng1})  ↔  {zh2} ({eng2})")
+                # Fetch alternatives for both words
+                try:
+                    _, _, _, alts1 = google_translate(zh1)
+                except RuntimeError:
+                    alts1 = []
+                try:
+                    _, _, _, alts2 = google_translate(zh2)
+                except RuntimeError:
+                    alts2 = []
+                time.sleep(0.3)
+
+                # Differentiate each using the other's definition
+                new_eng1 = differentiate_definition(zh1, eng1, alts1, {eng2})
+                new_eng2 = differentiate_definition(zh2, eng2, alts2, {eng1})
+
+                r1 = zh_to_record.get(zh1)
+                r2 = zh_to_record.get(zh2)
+
+                changed = False
+                if r1 and new_eng1 != eng1 and not is_lesson(r1):
+                    r1["fields"]["English"] = new_eng1
+                    changed = True
+                if r2 and new_eng2 != eng2 and not is_lesson(r2):
+                    r2["fields"]["English"] = new_eng2
+                    changed = True
+
+                if changed:
+                    similarity_fixed += 1
+                    print(f"    {zh1}: {eng1} → {new_eng1}")
+                    print(f"    {zh2}: {eng2} → {new_eng2}")
+                else:
+                    print(f"    {zh1} ({eng1})  ↔  {zh2} ({eng2})  [no better alternatives found]")
+
+            # Rebuild index after fixes for accurate final report
+            def_index = build_definition_index(records)
         else:
             print("  No similar definitions found.")
 
@@ -301,8 +411,11 @@ def main():
     print(f"  Fixes applied: {fixes_applied}")
     print(f"  '(1 char)' stripped: {stripped}")
     if do_translation:
-        print(f"  Definitions enriched: {enriched}")
-        print(f"  Similarity warnings: {len(similarity_warnings)}")
+        if do_retranslate:
+            print(f"  Definitions retranslated: {retranslated}")
+        else:
+            print(f"  Definitions enriched: {enriched}")
+        print(f"  Similar pairs found: {len(similarity_warnings)}, auto-fixed: {similarity_fixed}")
     if do_tags:
         print(f"  Tags changed: {tags_changed}")
     print(f"  Google lookups: {fetched} (cache: {initial_cache_size} → {len(pos_cache)})")

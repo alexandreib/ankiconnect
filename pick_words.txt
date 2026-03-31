@@ -3,39 +3,3 @@
 # Lines starting with # are ignored.
 # Format: 中文 | Pinyin | English
 
-# ── New words from documents / mylist ──
-交易 | Jiāoyì | trade, transaction, business deal, merchandise
-交易所裸 | Jiāoyì suǒ luǒ | exchange naked
-另外 | Lìngwài | in addition, other, additional, separate
-小偷 | Xiǎotōu | Thief, sharp
-小心 | Xiǎoxīn | careful, carefully, carefulness
-我自己 | Wǒ zìjǐ | myself
-护照 | Hùzhào | passport, identification
-提到 | Tí dào | mentioned, mention, refer
-提取 | Tíqǔ | extract, draw, abstract, pick up
-查看 | Chákàn | Check, examine, look over
-沟通 | Gōutōng | communicate, communication
-真的吗 | Zhēn de ma | Really
-糟糕 | Zāogāo | Oops, bad, terrible
-系联 | Xì lián | Contact
-自己 | Zìjǐ | Own, oneself, self
-解析 | Jiěxī | parse, resolve, analyze
-警察 | Jǐngchá | police, policeman, police force, constabulary
-请于 | Qǐng yú | Please at
-请再说一遍 | Qǐng zàishuō yībiàn | please say it again, Say that again, please., Say that once more please.
-附件 | Fùjiàn | appendix, annex, attachment, accessory
-
-# ── Single characters (decomposed from multi-char words) ──
-偷 | Tōu | steal, pilfer, filch, reave
-取 | Qǔ | Pick, take, get, fetch
-另 | Lìng | Other, another, separate, separately
-察 | Chá | inspect, observe, examine, inquire
-己 | Jǐ | self, sixth heavenly stem
-护 | Hù | protect
-提 | Tí | carry, mention, extract, raise
-析 | Xī | analyze, separate, dissect, explain
-沟 | Gōu | ditch, trench, gutter, fossa
-糟 | Zāo | Bad, dregs, waste, spoil
-裸 | Luǒ | bare, naked, disposed, nakedness
-警 | Jǐng | police, police force, constabulary, alert
-遍 | Biàn | all over, everywhere, time

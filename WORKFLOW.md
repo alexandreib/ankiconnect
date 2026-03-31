@@ -16,7 +16,7 @@ Anki must be running with the AnkiConnect plugin installed (default port 8765).
 |------------------|---------|
 | `shared.py` | Shared utilities (Google Translate, caches, document extraction, constants) |
 | `anki_hsk.py` | AnkiConnect operations: export / import / pick / models |
-| `cleanup_tags.py` | Clean deck data: enrich definitions, POS tags, similarity check, decompose multi-char words |
+| `cleanup_tags.py` | Clean deck data: enrich definitions, POS tags, auto-fix similar definitions, decompose multi-char words |
 | `generate_new_words.py` | Extract new vocabulary from `.pptx` / `.doc` / `.txt` → `pick_words.txt` |
 | `go.py` | One-command: export deck then generate pick list |
 | `never_propose_words.txt` | Characters / words to exclude from proposals (supports `char` or `char \| pinyin \| english`) |
@@ -83,19 +83,26 @@ python anki_hsk.py pick       # 5. (if single chars were found)
 
 | Flag | Values | Default | Description |
 |------|--------|---------|-------------|
-| `--mode` | `translation`, `tags`, `all` | `all` | What to update |
+| `--mode` | `translation`, `retranslate`, `tags`, `all` | `all` | What to update |
 | `--scope` | `new`, `existing`, `all` | `all` | Which words to process (new = not in backup, existing = in backup) |
 
 **Examples:**
 
 ```bash
-python cleanup_tags.py --mode translation              # Update translations only (all words)
+python cleanup_tags.py --mode translation              # Enrich short definitions (all words)
+python cleanup_tags.py --mode retranslate              # Replace ALL definitions with fresh Google Translate
+python cleanup_tags.py --mode retranslate --scope new  # Replace definitions for new words only
 python cleanup_tags.py --mode tags                     # Update tags only (all words)
-python cleanup_tags.py --mode translation --scope new  # Update translations for new words only
 python cleanup_tags.py --mode tags --scope existing    # Update tags for existing words only
 ```
 
-**Similarity check:** When updating translations (`--mode translation` or `--mode all`), the script compares English definitions across all cards and warns about pairs that share ≥50% of their meaningful words. This helps distinguish cards with overlapping meanings.
+**Modes explained:**
+- `translation` — Only enriches short definitions (≤3 words, no commas) by appending Google Translate alternatives
+- `retranslate` — **Replaces** all English definitions with a fresh Google Translate lookup (primary + up to 3 alternatives). Use this to clean up old/redundant definitions like `"Tall/high, tall, expensive, lofty"`
+- `tags` — Only updates POS and character-count tags
+- `all` — Enrich translations + update tags (default, same as running `translation` + `tags`)
+
+**Similarity auto-fix:** When updating translations (`--mode translation` or `--mode all`), the script compares English definitions across all cards. Pairs sharing ≥50% of meaningful words are detected and automatically differentiated by fetching fresh Google Translate alternatives and preferring unique words that don't appear in the conflicting card's definition. Pairs that can't be improved are still reported.
 
 **Character count tags:** All cards receive a `single` (1-char) or `double` (2-char) tag automatically.
 
