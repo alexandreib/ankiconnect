@@ -1,0 +1,233 @@
+================================================================================
+  ANKI CARD TEMPLATES — HSK Vocabulary
+  Copy/paste each section into the Anki card template editor
+================================================================================
+
+
+════════════════════════════════════════════════════════════════════════════════
+  NOTE TYPE 1:  English → Chinese
+  (Front: English + Tags  →  Back: Chinese + Pinyin + Comment)
+════════════════════════════════════════════════════════════════════════════════
+
+── FRONT TEMPLATE ──────────────────────────────────────────────────────────────
+
+<div class="card front">
+  <div class="english">{{English}}</div>
+  <div class="tags-bar">{{Tags}}</div>
+</div>
+
+<script>
+(function() {
+  document.querySelectorAll('.tags-bar').forEach(function(bar) {
+    var raw = bar.textContent.trim();
+    if (!raw) return;
+    var tags = raw.split(/\s+/);
+    bar.innerHTML = '';
+    tags.forEach(function(t) {
+      if (!t) return;
+      var span = document.createElement('span');
+      span.className = 'tag tag-' + t.toLowerCase().replace(/::/g, '-');
+      span.textContent = t.replace(/::/g, ' \u203A ');
+      bar.appendChild(span);
+    });
+  });
+})();
+</script>
+
+── BACK TEMPLATE ───────────────────────────────────────────────────────────────
+
+{{FrontSide}}
+<hr id="answer">
+
+<div class="card back">
+  <div class="chinese">{{中文}}</div>
+  <div class="pinyin">{{Pinyin}}</div>
+  {{#Comment}}<div class="comment">{{Comment}}</div>{{/Comment}}
+</div>
+
+
+════════════════════════════════════════════════════════════════════════════════
+  NOTE TYPE 2:  Chinese → Details
+  (Front: Chinese  →  Back: Chinese + Pinyin + Comment + Tags)
+════════════════════════════════════════════════════════════════════════════════
+
+── FRONT TEMPLATE ──────────────────────────────────────────────────────────────
+
+<div class="card front">
+  <div class="chinese">{{中文}}</div>
+</div>
+
+── BACK TEMPLATE ───────────────────────────────────────────────────────────────
+
+<div class="card back">
+  <div class="chinese">{{中文}}</div>
+  <div class="pinyin">{{Pinyin}}</div>
+  {{#Comment}}<div class="comment">{{Comment}}</div>{{/Comment}}
+  <div class="tags-bar">{{Tags}}</div>
+</div>
+
+<script>
+(function() {
+  document.querySelectorAll('.tags-bar').forEach(function(bar) {
+    var raw = bar.textContent.trim();
+    if (!raw) return;
+    var tags = raw.split(/\s+/);
+    bar.innerHTML = '';
+    tags.forEach(function(t) {
+      if (!t) return;
+      var span = document.createElement('span');
+      span.className = 'tag tag-' + t.toLowerCase().replace(/::/g, '-');
+      span.textContent = t.replace(/::/g, ' \u203A ');
+      bar.appendChild(span);
+    });
+  });
+})();
+</script>
+
+
+════════════════════════════════════════════════════════════════════════════════
+  STYLING  (shared — paste in the "Styling" box of BOTH note types)
+════════════════════════════════════════════════════════════════════════════════
+
+/* ── Base ─────────────────────────────────────────── */
+.card {
+  font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+  text-align: center;
+  padding: 24px 16px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* ── Chinese ──────────────────────────────────────── */
+.chinese {
+  font-size: 52px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+/* ── Pinyin ───────────────────────────────────────── */
+.pinyin {
+  font-size: 22px;
+  color: #555;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+/* ── English ──────────────────────────────────────── */
+.english {
+  font-size: 26px;
+  color: #1a1a2e;
+  font-weight: 600;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+/* ── Comment ──────────────────────────────────────── */
+.comment {
+  font-size: 15px;
+  color: #666;
+  background: #f5f5f5;
+  border-left: 3px solid #ccc;
+  padding: 6px 12px;
+  margin: 12px auto;
+  max-width: 360px;
+  text-align: left;
+  border-radius: 4px;
+}
+
+/* ── Tag pills container ─────────────────────────── */
+.tags-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+/* ── Individual tag pill ─────────────────────────── */
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  letter-spacing: 0.03em;
+  text-transform: lowercase;
+}
+
+/* ── POS colors ──────────────────────────────────── */
+.tag-verb            { background: #dbeafe; color: #1e40af; }
+.tag-verb-auxiliary   { background: #dbeafe; color: #1e40af; border: 1px dashed #60a5fa; }
+.tag-noun            { background: #fef3c7; color: #92400e; }
+.tag-adjective       { background: #d1fae5; color: #065f46; }
+.tag-adverb          { background: #ede9fe; color: #5b21b6; }
+.tag-conjunction     { background: #fce7f3; color: #9d174d; }
+.tag-number          { background: #e0e7ff; color: #3730a3; }
+.tag-measureword     { background: #f3e8ff; color: #6b21a8; }
+
+/* ── Noun subcategories (amber + dashed border) ─── */
+.tag-noun-animal     { background: #fef3c7; color: #78350f; border: 1px dashed #d97706; }
+.tag-noun-clothes    { background: #fef3c7; color: #78350f; border: 1px dashed #d97706; }
+.tag-noun-color      { background: #fef3c7; color: #78350f; border: 1px dashed #d97706; }
+.tag-noun-festival   { background: #fef3c7; color: #78350f; border: 1px dashed #d97706; }
+.tag-noun-food       { background: #fef3c7; color: #78350f; border: 1px dashed #d97706; }
+.tag-noun-object     { background: #fef3c7; color: #78350f; border: 1px dashed #d97706; }
+.tag-noun-sport      { background: #fef3c7; color: #78350f; border: 1px dashed #d97706; }
+.tag-noun-world      { background: #fef3c7; color: #78350f; border: 1px dashed #d97706; }
+
+/* ── Format / type ───────────────────────────────── */
+.tag-single          { background: #f0f0f0; color: #444; }
+.tag-sentence        { background: #f0f0f0; color: #444; }
+.tag-questions       { background: #fff7ed; color: #c2410c; }
+.tag-time-point      { background: #ecfdf5; color: #047857; }
+
+/* ── Meta ────────────────────────────────────────── */
+.tag-lesson          { background: #e5e7eb; color: #374151; }
+.tag-newwords        { background: #e5e7eb; color: #374151; }
+.tag-leech           { background: #fee2e2; color: #991b1b; }
+
+/* ── Night mode overrides ────────────────────────── */
+.nightMode .card     { background: #1a1a2e; }
+.nightMode .chinese  { color: #e0e0e0; }
+.nightMode .pinyin   { color: #aaa; }
+.nightMode .english  { color: #e0e0e0; }
+.nightMode .comment  { background: #2a2a3e; border-color: #555; color: #bbb; }
+
+
+════════════════════════════════════════════════════════════════════════════════
+  TAG COLOR REFERENCE
+════════════════════════════════════════════════════════════════════════════════
+
+  Tag              Color         Example
+  ───────────────  ────────────  ─────────────────────────
+  verb             blue pill     [verb]
+  verb::auxiliary  blue dashed   [verb › auxiliary]
+  noun             amber pill    [noun]
+  noun::food       amber dashed  [noun › food]
+  noun::animal     amber dashed  [noun › animal]
+  adjective        green pill    [adjective]
+  adverb           purple pill   [adverb]
+  conjunction      pink pill     [conjunction]
+  number           indigo pill   [number]
+  measureword      violet pill   [measureword]
+  single           gray pill     [single]
+  sentence         gray pill     [sentence]
+  questions        orange pill   [questions]
+  time::point      teal pill     [time › point]
+  lesson           slate pill    [lesson]
+  newwords         slate pill    [newwords]
+  leech            red pill      [leech]
+
+════════════════════════════════════════════════════════════════════════════════
+  HOW TO APPLY
+════════════════════════════════════════════════════════════════════════════════
+
+  1. In Anki, go to  Tools → Manage Note Types
+  2. Select your note type → Cards...
+  3. Paste the FRONT TEMPLATE into "Front Template"
+  4. Paste the BACK TEMPLATE into "Back Template"
+  5. Paste the STYLING into "Styling"
+  6. Repeat for the second note type
+  7. Click "Save" and preview a card

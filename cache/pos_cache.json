@@ -1,0 +1,5498 @@
+{
+  "生": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "很": [
+    "adverb"
+  ],
+  "高": [
+    "adjective",
+    "adverb",
+    "noun"
+  ],
+  "小": [
+    "adjective"
+  ],
+  "大": [
+    "adjective"
+  ],
+  "冷": [
+    "adjective"
+  ],
+  "热": [
+    "noun",
+    "adjective",
+    "verb",
+    "adverb"
+  ],
+  "聪明": [
+    "adjective",
+    "noun"
+  ],
+  "多": [
+    "adjective"
+  ],
+  "少": [
+    "adverb",
+    "adjective",
+    "verb",
+    "noun"
+  ],
+  "兴": [
+    "noun",
+    "verb"
+  ],
+  "明": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "我": [],
+  "你": [],
+  "家": [
+    "noun",
+    "adjective"
+  ],
+  "同": [
+    "adjective",
+    "adverb",
+    "noun"
+  ],
+  "老": [
+    "adjective",
+    "adverb"
+  ],
+  "米": [
+    "noun"
+  ],
+  "饭": [
+    "noun"
+  ],
+  "板": [
+    "noun"
+  ],
+  "般": [
+    "noun"
+  ],
+  "觉得": [
+    "verb"
+  ],
+  "也": [
+    "adverb"
+  ],
+  "更": [
+    "adjective",
+    "adverb",
+    "verb",
+    "noun"
+  ],
+  "喜": [
+    "verb",
+    "adjective",
+    "noun"
+  ],
+  "欢": [
+    "adjective"
+  ],
+  "样": [
+    "noun",
+    "adjective"
+  ],
+  "漂亮": [
+    "adjective"
+  ],
+  "牛": [
+    "noun"
+  ],
+  "五": [
+    "noun"
+  ],
+  "午": [
+    "noun"
+  ],
+  "非": [
+    "adverb"
+  ],
+  "常": [
+    "adverb",
+    "adjective"
+  ],
+  "非常": [
+    "adverb",
+    "adjective"
+  ],
+  "可": [
+    "verb",
+    "adverb"
+  ],
+  "能": [
+    "verb",
+    "adjective",
+    "noun"
+  ],
+  "可能": [
+    "verb",
+    "adjective",
+    "noun"
+  ],
+  "今": [
+    "adverb",
+    "adjective"
+  ],
+  "天": [
+    "noun",
+    "adverb"
+  ],
+  "昨天": [
+    "adverb",
+    "noun"
+  ],
+  "成": [
+    "verb",
+    "adjective"
+  ],
+  "黄": [
+    "adjective",
+    "noun"
+  ],
+  "蓝": [
+    "noun",
+    "adjective"
+  ],
+  "红": [
+    "adjective",
+    "noun"
+  ],
+  "绿": [
+    "adjective",
+    "noun"
+  ],
+  "白": [
+    "adjective"
+  ],
+  "黑": [
+    "adjective",
+    "noun",
+    "adverb"
+  ],
+  "贵": [
+    "adjective",
+    "noun"
+  ],
+  "穿": [
+    "verb",
+    "adverb"
+  ],
+  "会": [
+    "verb",
+    "noun",
+    "adjective"
+  ],
+  "色": [
+    "noun"
+  ],
+  "晚": [
+    "adjective",
+    "noun"
+  ],
+  "中": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "给": [
+    "verb",
+    "adverb"
+  ],
+  "年": [
+    "noun"
+  ],
+  "出": [
+    "verb"
+  ],
+  "道": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "知": [
+    "verb"
+  ],
+  "吃": [
+    "verb",
+    "noun"
+  ],
+  "喝": [
+    "verb",
+    "noun"
+  ],
+  "上": [
+    "adjective",
+    "adverb",
+    "verb"
+  ],
+  "下": [
+    "adjective",
+    "adverb",
+    "verb"
+  ],
+  "号": [
+    "noun",
+    "verb"
+  ],
+  "带": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "礼": [
+    "noun"
+  ],
+  "人": [
+    "noun"
+  ],
+  "月": [
+    "noun"
+  ],
+  "万": [
+    "noun",
+    "adverb"
+  ],
+  "物": [
+    "noun"
+  ],
+  "节": [
+    "noun",
+    "verb"
+  ],
+  "公司": [
+    "noun",
+    "adjective"
+  ],
+  "司": [
+    "noun",
+    "verb"
+  ],
+  "公": [
+    "adjective",
+    "noun",
+    "adverb",
+    "verb"
+  ],
+  "火": [
+    "noun",
+    "adjective"
+  ],
+  "几": [
+    "adverb",
+    "adjective",
+    "noun"
+  ],
+  "锅": [
+    "noun"
+  ],
+  "火锅": [
+    "noun"
+  ],
+  "再见": [],
+  "再": [
+    "adverb",
+    "adjective",
+    "verb"
+  ],
+  "见": [
+    "verb",
+    "noun",
+    "adjective"
+  ],
+  "现在": [
+    "adverb",
+    "noun",
+    "adjective"
+  ],
+  "在": [
+    "verb"
+  ],
+  "现": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "课": [
+    "noun",
+    "verb"
+  ],
+  "星期": [
+    "noun"
+  ],
+  "上课": [
+    "verb"
+  ],
+  "上班": [
+    "verb"
+  ],
+  "班": [
+    "noun",
+    "adjective"
+  ],
+  "奶": [
+    "noun",
+    "verb"
+  ],
+  "鸡": [
+    "noun"
+  ],
+  "蛋": [
+    "noun",
+    "adjective"
+  ],
+  "鸡蛋": [
+    "noun"
+  ],
+  "汤": [
+    "noun",
+    "verb"
+  ],
+  "书": [
+    "noun",
+    "verb"
+  ],
+  "菜": [
+    "noun"
+  ],
+  "馆": [
+    "noun"
+  ],
+  "饭馆": [
+    "noun"
+  ],
+  "日": [
+    "noun",
+    "adjective"
+  ],
+  "做": [
+    "verb"
+  ],
+  "场": [
+    "noun"
+  ],
+  "包": [
+    "noun",
+    "verb"
+  ],
+  "面": [
+    "noun",
+    "verb"
+  ],
+  "面包": [
+    "noun"
+  ],
+  "空": [
+    "noun",
+    "adjective"
+  ],
+  "忙": [
+    "adjective",
+    "verb"
+  ],
+  "太": [
+    "adverb",
+    "adjective"
+  ],
+  "什么": [
+    "adjective"
+  ],
+  "点": [
+    "noun",
+    "verb"
+  ],
+  "分": [
+    "noun",
+    "verb"
+  ],
+  "早": [
+    "adjective",
+    "adverb",
+    "noun"
+  ],
+  "半": [
+    "noun",
+    "adverb"
+  ],
+  "刻": [
+    "adjective",
+    "noun",
+    "verb",
+    "adverb"
+  ],
+  "每": [],
+  "还": [
+    "adverb",
+    "verb",
+    "adjective"
+  ],
+  "零": [
+    "adjective",
+    "noun"
+  ],
+  "帅": [
+    "noun"
+  ],
+  "事": [
+    "noun",
+    "verb"
+  ],
+  "师": [
+    "noun"
+  ],
+  "长": [
+    "adjective",
+    "noun",
+    "verb",
+    "adverb"
+  ],
+  "都": [
+    "adjective",
+    "noun",
+    "adverb"
+  ],
+  "酒": [
+    "noun"
+  ],
+  "喜欢": [
+    "verb"
+  ],
+  "岁": [
+    "noun"
+  ],
+  "学生": [
+    "noun"
+  ],
+  "同事": [
+    "noun"
+  ],
+  "同学": [
+    "noun"
+  ],
+  "朋友": [
+    "noun"
+  ],
+  "室友": [
+    "noun"
+  ],
+  "起": [
+    "verb"
+  ],
+  "关系": [
+    "noun",
+    "verb"
+  ],
+  "客气": [
+    "adjective"
+  ],
+  "客人": [
+    "noun"
+  ],
+  "问": [
+    "verb",
+    "adjective"
+  ],
+  "关": [
+    "verb",
+    "noun",
+    "adjective"
+  ],
+  "系": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "国": [
+    "noun",
+    "adjective"
+  ],
+  "法国": [
+    "noun"
+  ],
+  "高兴": [
+    "adjective",
+    "verb",
+    "noun",
+    "adverb"
+  ],
+  "老板": [
+    "noun"
+  ],
+  "漂": [
+    "verb",
+    "adjective",
+    "noun"
+  ],
+  "亮": [
+    "noun"
+  ],
+  "说": [
+    "verb",
+    "noun",
+    "adjective"
+  ],
+  "外": [
+    "adjective",
+    "adverb"
+  ],
+  "是": [
+    "verb",
+    "adjective"
+  ],
+  "有": [
+    "verb"
+  ],
+  "作": [
+    "verb",
+    "noun"
+  ],
+  "本": [
+    "noun",
+    "adjective"
+  ],
+  "本子": [
+    "noun"
+  ],
+  "菜单": [
+    "noun"
+  ],
+  "小说": [
+    "noun"
+  ],
+  "笨": [
+    "adjective"
+  ],
+  "笨蛋": [
+    "noun"
+  ],
+  "杯": [
+    "noun"
+  ],
+  "一辈子": [
+    "noun",
+    "adverb"
+  ],
+  "情人": [
+    "noun"
+  ],
+  "情": [
+    "noun"
+  ],
+  "个": [
+    "adjective",
+    "noun"
+  ],
+  "这": [
+    "adverb"
+  ],
+  "那": [
+    "adjective",
+    "adverb"
+  ],
+  "第": [],
+  "饺子": [],
+  "冰": [
+    "noun"
+  ],
+  "看到": [
+    "verb"
+  ],
+  "电脑": [
+    "noun"
+  ],
+  "笔记本": [
+    "noun"
+  ],
+  "手机": [
+    "noun"
+  ],
+  "名": [
+    "noun"
+  ],
+  "单": [
+    "adjective",
+    "adverb",
+    "noun"
+  ],
+  "Lesson measure word": [],
+  "笼": [
+    "noun",
+    "verb"
+  ],
+  "一": [
+    "adjective"
+  ],
+  "二": [],
+  "三": [],
+  "四": [],
+  "六": [
+    "noun"
+  ],
+  "七": [
+    "noun"
+  ],
+  "八": [
+    "noun"
+  ],
+  "九": [],
+  "十": [
+    "noun"
+  ],
+  "百": [
+    "noun",
+    "adjective"
+  ],
+  "圣诞节": [
+    "noun"
+  ],
+  "圣": [
+    "adjective",
+    "noun"
+  ],
+  "诞生": [
+    "verb"
+  ],
+  "新年": [
+    "noun"
+  ],
+  "新": [
+    "adjective",
+    "adverb"
+  ],
+  "情人节": [],
+  "国庆节": [],
+  "庆": [
+    "verb"
+  ],
+  "春": [],
+  "端午节": [
+    "noun"
+  ],
+  "中秋节": [
+    "noun"
+  ],
+  "秋": [
+    "noun"
+  ],
+  "小时": [
+    "noun"
+  ],
+  "分钟": [
+    "noun"
+  ],
+  "秒": [
+    "noun"
+  ],
+  "数学": [
+    "noun"
+  ],
+  "哪": [
+    "adjective"
+  ],
+  "学": [
+    "verb",
+    "noun"
+  ],
+  "要": [
+    "verb",
+    "adjective"
+  ],
+  "去": [
+    "noun",
+    "verb"
+  ],
+  "星期天": [
+    "noun"
+  ],
+  "脏话": [
+    "noun"
+  ],
+  "总": [
+    "adjective",
+    "adverb",
+    "noun",
+    "verb"
+  ],
+  "其他": [
+    "adjective",
+    "adverb"
+  ],
+  "明天": [
+    "adverb",
+    "noun"
+  ],
+  "时间": [
+    "noun"
+  ],
+  "周": [
+    "noun",
+    "adjective",
+    "adverb",
+    "verb"
+  ],
+  "怎么样": [
+    "adverb"
+  ],
+  "可以": [
+    "verb",
+    "adjective"
+  ],
+  "是什么": [],
+  "会议": [
+    "noun"
+  ],
+  "之后": [
+    "adjective",
+    "adverb"
+  ],
+  "读": [
+    "verb",
+    "noun"
+  ],
+  "上学校": [],
+  "学校": [
+    "noun"
+  ],
+  "小学": [
+    "noun"
+  ],
+  "中学": [
+    "noun"
+  ],
+  "大学": [
+    "noun"
+  ],
+  "男生": [
+    "noun"
+  ],
+  "女生": [],
+  "看": [
+    "verb",
+    "noun"
+  ],
+  "Lesson TimeDuration, Time point": [],
+  "问题": [
+    "noun"
+  ],
+  "住": [
+    "verb"
+  ],
+  "前": [
+    "adverb",
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "从...到...": [],
+  "钱": [
+    "noun"
+  ],
+  "后": [
+    "adverb",
+    "noun",
+    "adjective"
+  ],
+  "夫子": [
+    "noun"
+  ],
+  "数据": [
+    "noun",
+    "adjective"
+  ],
+  "周末": [
+    "noun"
+  ],
+  "末": [
+    "noun"
+  ],
+  "开": [
+    "verb",
+    "noun"
+  ],
+  "哈哈": [],
+  "弟弟": [
+    "noun"
+  ],
+  "妹妹": [
+    "noun"
+  ],
+  "哥哥": [
+    "noun"
+  ],
+  "姐姐": [
+    "noun"
+  ],
+  "机场": [
+    "noun",
+    "verb"
+  ],
+  "汉语": [
+    "noun"
+  ],
+  "冬至": [],
+  "冬": [
+    "adjective",
+    "noun"
+  ],
+  "一定": [
+    "adjective",
+    "adverb"
+  ],
+  "空闲": [
+    "adjective",
+    "noun"
+  ],
+  "很多": [
+    "adjective",
+    "adverb",
+    "noun"
+  ],
+  "家人们": [],
+  "中文": [
+    "noun"
+  ],
+  "出生": [
+    "verb"
+  ],
+  "总数": [
+    "noun"
+  ],
+  "数": [
+    "noun",
+    "adjective",
+    "verb",
+    "adverb"
+  ],
+  "太太": [
+    "noun"
+  ],
+  "但": [
+    "adverb"
+  ],
+  "生日": [
+    "noun"
+  ],
+  "来": [
+    "verb",
+    "adjective"
+  ],
+  "开始": [
+    "verb",
+    "adjective",
+    "noun"
+  ],
+  "谁": [
+    "adjective"
+  ],
+  "哪儿": [
+    "adverb"
+  ],
+  "哪里": [
+    "adverb"
+  ],
+  "医院": [
+    "noun"
+  ],
+  "火车站": [
+    "noun"
+  ],
+  "飞机场": [
+    "noun"
+  ],
+  "路": [
+    "noun"
+  ],
+  "厕所": [
+    "noun"
+  ],
+  "什么时候": [],
+  "时候": [
+    "noun"
+  ],
+  "多长时间": [],
+  "多久": [],
+  "Lesson Er or Liang": [],
+  "Lesson shi, not shi": [],
+  "晚上": [
+    "adverb"
+  ],
+  "晚饭": [
+    "noun"
+  ],
+  "午饭": [
+    "noun"
+  ],
+  "桌子": [
+    "noun"
+  ],
+  "头发": [
+    "noun"
+  ],
+  "裤子": [
+    "noun"
+  ],
+  "放假": [
+    "noun",
+    "verb"
+  ],
+  "篮球": [
+    "noun"
+  ],
+  "走路": [
+    "verb"
+  ],
+  "开车": [
+    "verb"
+  ],
+  "工作": [
+    "noun",
+    "verb"
+  ],
+  "为什么": [
+    "adverb"
+  ],
+  "为": [
+    "verb"
+  ],
+  "今天晚上": [],
+  "今天中午": [],
+  "最": [
+    "adjective"
+  ],
+  "名字": [
+    "noun"
+  ],
+  "最近": [
+    "adjective",
+    "adverb"
+  ],
+  "你叫什么名字?": [],
+  "小区": [],
+  "销售员": [],
+  "在做": [],
+  "做饭": [],
+  "游泳": [
+    "verb"
+  ],
+  "休息": [
+    "noun",
+    "verb"
+  ],
+  "想": [
+    "verb"
+  ],
+  "买": [
+    "verb"
+  ],
+  "水果": [
+    "noun"
+  ],
+  "什么水果": [],
+  "苹果": [
+    "noun"
+  ],
+  "西瓜": [
+    "noun"
+  ],
+  "芒果": [
+    "noun"
+  ],
+  "葡萄": [
+    "noun",
+    "adjective"
+  ],
+  "叫": [
+    "verb"
+  ],
+  "数据库": [
+    "noun"
+  ],
+  "库": [
+    "noun"
+  ],
+  "站": [
+    "noun",
+    "verb"
+  ],
+  "车": [
+    "noun"
+  ],
+  "工作日": [],
+  "果汁": [
+    "noun"
+  ],
+  "橙色": [],
+  "汁": [
+    "noun"
+  ],
+  "所有": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "草莓": [
+    "noun"
+  ],
+  "蓝莓": [
+    "noun"
+  ],
+  "香蕉": [
+    "noun"
+  ],
+  "在上中文课": [],
+  "玩儿": [
+    "verb"
+  ],
+  "睡觉": [
+    "verb"
+  ],
+  "小孩": [
+    "noun"
+  ],
+  "儿童": [
+    "noun",
+    "adjective"
+  ],
+  "物业": [],
+  "唱歌": [
+    "verb"
+  ],
+  "上海": [
+    "noun"
+  ],
+  "悉尼": [],
+  "超市": [],
+  "超": [
+    "verb"
+  ],
+  "和": [
+    "noun",
+    "adverb",
+    "verb",
+    "adjective"
+  ],
+  "参加": [
+    "verb",
+    "adjective"
+  ],
+  "线上": [
+    "adjective"
+  ],
+  "培训": [
+    "verb"
+  ],
+  "等": [
+    "verb",
+    "noun"
+  ],
+  "跳舞": [
+    "noun",
+    "verb"
+  ],
+  "家人": [
+    "noun"
+  ],
+  "海滩": [
+    "noun"
+  ],
+  "海面很平": [],
+  "波浪": [
+    "noun"
+  ],
+  "好玩儿": [
+    "adjective"
+  ],
+  "香水": [
+    "noun"
+  ],
+  "香": [
+    "noun",
+    "adjective"
+  ],
+  "北京烤鸭": [],
+  "野餐": [
+    "noun",
+    "verb"
+  ],
+  "披萨": [],
+  "三明治": [
+    "noun"
+  ],
+  "简单": [
+    "adjective",
+    "noun"
+  ],
+  "专业": [
+    "noun",
+    "adjective"
+  ],
+  "微电子学": [],
+  "电视": [
+    "noun"
+  ],
+  "电影": [
+    "noun"
+  ],
+  "图书馆": [
+    "noun"
+  ],
+  "附近": [
+    "adverb",
+    "noun",
+    "adjective"
+  ],
+  "还是": [
+    "adverb"
+  ],
+  "香港": [
+    "noun"
+  ],
+  "颜色": [
+    "noun"
+  ],
+  "西红柿": [
+    "noun"
+  ],
+  "辣椒": [
+    "noun"
+  ],
+  "南瓜": [
+    "noun"
+  ],
+  "番茄": [],
+  "员": [
+    "noun"
+  ],
+  "老外": [
+    "noun"
+  ],
+  "用": [
+    "noun",
+    "verb"
+  ],
+  "洋葱": [
+    "noun"
+  ],
+  "狐狸": [
+    "noun"
+  ],
+  "橘子": [
+    "noun"
+  ],
+  "羊": [
+    "noun"
+  ],
+  "动物": [
+    "noun"
+  ],
+  "老鼠": [
+    "noun"
+  ],
+  "黄瓜": [
+    "noun"
+  ],
+  "巧克力": [
+    "noun"
+  ],
+  "知道": [
+    "verb",
+    "noun",
+    "adjective"
+  ],
+  "长颈鹿": [
+    "noun"
+  ],
+  "鳄鱼": [
+    "noun"
+  ],
+  "鲨鱼": [
+    "noun"
+  ],
+  "大象": [],
+  "蔬菜": [
+    "noun"
+  ],
+  "炒土豆丝": [],
+  "土豆": [
+    "noun"
+  ],
+  "辣椒炒肉": [],
+  "肉": [
+    "noun"
+  ],
+  "凉拌": [],
+  "糖拌": [],
+  "炒": [
+    "verb"
+  ],
+  "柠檬": [
+    "noun"
+  ],
+  "玉米": [
+    "noun"
+  ],
+  "豆子": [
+    "noun"
+  ],
+  "猕猴桃": [
+    "noun"
+  ],
+  "孩子": [
+    "noun",
+    "adjective"
+  ],
+  "平": [
+    "adjective",
+    "adverb",
+    "verb"
+  ],
+  "北京": [
+    "noun"
+  ],
+  "北": [
+    "adjective",
+    "noun"
+  ],
+  "京": [
+    "noun"
+  ],
+  "微": [
+    "adjective",
+    "noun"
+  ],
+  "电": [
+    "noun",
+    "verb"
+  ],
+  "橙子": [
+    "noun"
+  ],
+  "教室": [
+    "noun"
+  ],
+  "会议室": [
+    "noun"
+  ],
+  "卧室": [
+    "noun"
+  ],
+  "宿舍": [
+    "noun"
+  ],
+  "舍友": [],
+  "经理": [
+    "noun"
+  ],
+  "主管": [
+    "verb",
+    "noun"
+  ],
+  "累": [
+    "adjective",
+    "verb",
+    "adverb",
+    "noun"
+  ],
+  "耳机": [
+    "noun"
+  ],
+  "裙子": [
+    "noun"
+  ],
+  "哪个茶杯": [],
+  "麦当劳": [],
+  "肯德基": [],
+  "一天里": [],
+  "球": [
+    "noun"
+  ],
+  "篮": [
+    "noun"
+  ],
+  "教": [
+    "verb",
+    "noun"
+  ],
+  "西班牙": [
+    "noun"
+  ],
+  "颈": [
+    "noun"
+  ],
+  "鹿": [
+    "noun"
+  ],
+  "鱼": [
+    "noun"
+  ],
+  "丝": [
+    "noun",
+    "adjective",
+    "adverb"
+  ],
+  "差": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "一点儿": [
+    "adverb"
+  ],
+  "口": [
+    "noun",
+    "adjective"
+  ],
+  "早午饭": [],
+  "季节": [
+    "noun"
+  ],
+  "夏": [
+    "adjective",
+    "noun"
+  ],
+  "咖啡机": [],
+  "拼音": [
+    "noun",
+    "adjective"
+  ],
+  "拼": [
+    "verb",
+    "noun"
+  ],
+  "音": [
+    "noun",
+    "adjective"
+  ],
+  "拼车": [],
+  "拼桌": [],
+  "英语": [
+    "noun"
+  ],
+  "法语": [
+    "noun"
+  ],
+  "拌": [
+    "verb",
+    "noun"
+  ],
+  "凉": [
+    "adjective",
+    "verb"
+  ],
+  "糖": [
+    "noun",
+    "adjective"
+  ],
+  "爱": [
+    "noun",
+    "verb"
+  ],
+  "下雨": [
+    "verb"
+  ],
+  "棒": [
+    "noun",
+    "adjective"
+  ],
+  "意思": [
+    "noun"
+  ],
+  "不好意思": [
+    "verb"
+  ],
+  "没关系": [],
+  "李子": [
+    "noun"
+  ],
+  "下载": [
+    "verb"
+  ],
+  "载": [
+    "verb",
+    "adverb"
+  ],
+  "样本": [
+    "noun"
+  ],
+  "先生": [
+    "noun"
+  ],
+  "椅子": [
+    "noun"
+  ],
+  "爷爷": [
+    "noun"
+  ],
+  "奶奶": [
+    "noun"
+  ],
+  "房子": [
+    "noun"
+  ],
+  "熊猫": [
+    "noun"
+  ],
+  "足球": [
+    "noun"
+  ],
+  "手表": [
+    "noun"
+  ],
+  "冰箱": [
+    "noun"
+  ],
+  "箱": [
+    "noun"
+  ],
+  "写": [
+    "verb"
+  ],
+  "汉字": [
+    "noun"
+  ],
+  "元": [
+    "noun",
+    "adjective"
+  ],
+  "块": [
+    "noun"
+  ],
+  "手镯": [
+    "noun"
+  ],
+  "手套": [
+    "noun"
+  ],
+  "请": [
+    "adverb",
+    "verb"
+  ],
+  "坐": [
+    "verb"
+  ],
+  "盘子": [
+    "noun"
+  ],
+  "土": [
+    "noun"
+  ],
+  "楼": [
+    "noun",
+    "adjective"
+  ],
+  "手": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "机": [
+    "noun",
+    "adjective"
+  ],
+  "假": [
+    "adjective",
+    "verb",
+    "noun"
+  ],
+  "困": [
+    "adjective",
+    "verb"
+  ],
+  "起床": [
+    "verb"
+  ],
+  "床": [
+    "noun",
+    "adjective"
+  ],
+  "酷": [
+    "adverb",
+    "adjective"
+  ],
+  "衣服": [
+    "noun"
+  ],
+  "重": [
+    "noun",
+    "adjective",
+    "adverb",
+    "verb"
+  ],
+  "离": [
+    "adverb",
+    "verb",
+    "adjective"
+  ],
+  "远": [
+    "adjective",
+    "adverb",
+    "verb"
+  ],
+  "女士": [
+    "noun"
+  ],
+  "很快": [
+    "adverb"
+  ],
+  "讨论": [
+    "verb"
+  ],
+  "网上": [],
+  "爬山": [
+    "verb",
+    "noun"
+  ],
+  "山": [
+    "noun"
+  ],
+  "Lesson How": [],
+  "Lesson why": [],
+  "因为": [],
+  "着迷": [],
+  "今年": [
+    "noun"
+  ],
+  "明年": [
+    "noun"
+  ],
+  "去年": [
+    "noun"
+  ],
+  "后年": [],
+  "前年": [
+    "noun"
+  ],
+  "后天": [
+    "adjective",
+    "noun"
+  ],
+  "前天": [],
+  "今天": [
+    "adverb"
+  ],
+  "上个星期": [
+    "noun"
+  ],
+  "下个星期": [
+    "noun"
+  ],
+  "上个月": [
+    "noun"
+  ],
+  "这个月": [
+    "adverb",
+    "noun"
+  ],
+  "下个月": [
+    "noun"
+  ],
+  "动": [
+    "verb"
+  ],
+  "当": [
+    "verb",
+    "noun",
+    "adjective",
+    "adverb"
+  ],
+  "劳": [
+    "noun",
+    "verb"
+  ],
+  "麦": [
+    "noun"
+  ],
+  "近": [
+    "adverb",
+    "adjective"
+  ],
+  "德": [
+    "noun"
+  ],
+  "基": [
+    "noun",
+    "adjective"
+  ],
+  "港": [
+    "noun"
+  ],
+  "好": [
+    "adjective",
+    "adverb",
+    "verb"
+  ],
+  "他": [
+    "adjective",
+    "noun"
+  ],
+  "她": [],
+  "进展": [
+    "verb"
+  ],
+  "进": [
+    "verb",
+    "noun"
+  ],
+  "感": [
+    "noun",
+    "verb"
+  ],
+  "常常": [
+    "adverb"
+  ],
+  "经常": [
+    "adverb",
+    "adjective"
+  ],
+  "有时候": [
+    "adverb"
+  ],
+  "很少": [
+    "adverb"
+  ],
+  "几乎": [
+    "adverb",
+    "adjective"
+  ],
+  "从不": [],
+  "啤酒": [
+    "noun"
+  ],
+  "牛奶": [
+    "noun"
+  ],
+  "跑步": [
+    "noun",
+    "verb"
+  ],
+  "听": [
+    "verb",
+    "noun"
+  ],
+  "音乐": [
+    "noun"
+  ],
+  "乐": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "画画": [],
+  "打": [
+    "verb",
+    "noun"
+  ],
+  "电话": [
+    "noun"
+  ],
+  "话": [
+    "noun",
+    "verb"
+  ],
+  "脏": [
+    "adjective",
+    "noun"
+  ],
+  "聊天": [],
+  "白酒": [
+    "noun"
+  ],
+  "红酒": [],
+  "白葡萄酒": [
+    "noun"
+  ],
+  "次": [
+    "adjective",
+    "noun"
+  ],
+  "悬疑片": [],
+  "悬": [
+    "verb",
+    "adjective"
+  ],
+  "疑": [
+    "verb",
+    "adjective"
+  ],
+  "片": [
+    "noun"
+  ],
+  "游": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "到": [
+    "verb",
+    "adverb"
+  ],
+  "笔": [
+    "noun",
+    "verb"
+  ],
+  "记": [
+    "verb",
+    "noun"
+  ],
+  "培": [
+    "verb"
+  ],
+  "训": [
+    "verb",
+    "noun"
+  ],
+  "茄子": [
+    "noun"
+  ],
+  "桃": [
+    "noun"
+  ],
+  "猴子": [
+    "noun"
+  ],
+  "猕猴": [],
+  "里": [
+    "noun",
+    "adverb",
+    "adjective"
+  ],
+  "老公": [],
+  "老婆": [],
+  "风筝": [
+    "noun"
+  ],
+  "冲浪": [
+    "noun"
+  ],
+  "一直": [
+    "adverb"
+  ],
+  "lesson 块": [],
+  "你不是毛爷爷，不需要每个人都喜欢你。": [],
+  "牛油果": [],
+  "油": [
+    "noun",
+    "adjective"
+  ],
+  "杨桃": [
+    "noun"
+  ],
+  "一斤": [],
+  "西兰花": [],
+  "西": [
+    "adjective"
+  ],
+  "兰": [
+    "noun"
+  ],
+  "花": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "便宜": [],
+  "澳大利亚": [
+    "noun"
+  ],
+  "跳": [
+    "noun",
+    "verb"
+  ],
+  "风": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "经": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "理": [
+    "noun",
+    "verb"
+  ],
+  "因": [
+    "noun"
+  ],
+  "番": [
+    "adjective",
+    "verb"
+  ],
+  "季": [
+    "noun"
+  ],
+  "蔬": [
+    "noun"
+  ],
+  "语": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "休": [
+    "verb"
+  ],
+  "息": [
+    "noun"
+  ],
+  "练": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "医": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "以后": [
+    "adverb",
+    "adjective"
+  ],
+  "以前": [
+    "adverb",
+    "adjective"
+  ],
+  "数据库里": [],
+  "能便宜很多": [],
+  "付": [
+    "verb"
+  ],
+  "丈夫": [
+    "noun"
+  ],
+  "微信": [],
+  "信": [
+    "noun",
+    "verb"
+  ],
+  "支付宝": [],
+  "宝": [
+    "noun",
+    "adjective"
+  ],
+  "宝宝": [
+    "noun"
+  ],
+  "支付": [
+    "verb"
+  ],
+  "扫": [
+    "verb",
+    "noun"
+  ],
+  "请问": [],
+  "网": [
+    "noun"
+  ],
+  "奇怪": [
+    "adjective",
+    "adverb"
+  ],
+  "丢失": [
+    "verb"
+  ],
+  "速度": [
+    "noun",
+    "verb"
+  ],
+  "销售": [
+    "noun",
+    "verb"
+  ],
+  "不同": [
+    "adjective",
+    "verb",
+    "noun"
+  ],
+  "你用中文怎么说": [],
+  "多大": [],
+  "熊": [
+    "noun",
+    "verb"
+  ],
+  "院": [
+    "noun"
+  ],
+  "对于": [],
+  "对": [
+    "noun",
+    "adjective",
+    "verb",
+    "adverb"
+  ],
+  "于": [],
+  "由": [
+    "noun",
+    "verb"
+  ],
+  "天气": [
+    "noun"
+  ],
+  "如果": [],
+  "讲": [
+    "verb"
+  ],
+  "重来": [],
+  "一起": [
+    "adverb"
+  ],
+  "伦敦": [
+    "noun"
+  ],
+  "念": [
+    "verb",
+    "noun"
+  ],
+  "研究所": [
+    "noun"
+  ],
+  "研究": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "究": [
+    "verb",
+    "adverb"
+  ],
+  "研": [
+    "verb"
+  ],
+  "人间": [
+    "noun"
+  ],
+  "间": [
+    "adverb",
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "结婚": [
+    "verb"
+  ],
+  "结": [
+    "verb"
+  ],
+  "婚": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "离婚": [
+    "noun",
+    "verb"
+  ],
+  "已经": [
+    "adverb"
+  ],
+  "已": [
+    "adverb",
+    "verb"
+  ],
+  "分之": [],
+  "不错": [
+    "adjective",
+    "adverb"
+  ],
+  "错": [
+    "adjective",
+    "adverb",
+    "noun",
+    "verb"
+  ],
+  "添": [
+    "verb"
+  ],
+  "添加": [
+    "verb",
+    "noun"
+  ],
+  "加": [
+    "verb"
+  ],
+  "边": [
+    "noun"
+  ],
+  "目前": [
+    "adverb"
+  ],
+  "续": [
+    "adjective",
+    "verb"
+  ],
+  "不过": [
+    "adverb",
+    "adjective"
+  ],
+  "过": [
+    "verb"
+  ],
+  "需要": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "需": [
+    "verb",
+    "noun"
+  ],
+  "解决": [
+    "verb"
+  ],
+  "决": [
+    "verb",
+    "adverb"
+  ],
+  "解": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "工": [
+    "noun"
+  ],
+  "下线": [],
+  "下车": [
+    "verb"
+  ],
+  "上楼": [],
+  "自行车": [
+    "noun"
+  ],
+  "自": [
+    "noun",
+    "adverb"
+  ],
+  "行": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "骑": [
+    "noun",
+    "verb"
+  ],
+  "几个人": [],
+  "作业": [
+    "noun",
+    "verb"
+  ],
+  "遛狗": [],
+  "遛": [
+    "noun",
+    "verb"
+  ],
+  "野": [
+    "adjective",
+    "noun"
+  ],
+  "餐": [
+    "noun",
+    "verb"
+  ],
+  "餐厅": [
+    "noun"
+  ],
+  "出去": [],
+  "公园": [
+    "noun"
+  ],
+  "园": [
+    "noun"
+  ],
+  "在床上": [],
+  "音乐会": [
+    "noun"
+  ],
+  "婆": [
+    "noun"
+  ],
+  "展": [
+    "noun",
+    "verb"
+  ],
+  "所": [
+    "noun"
+  ],
+  "宿": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "舍": [
+    "noun",
+    "verb"
+  ],
+  "图": [
+    "noun",
+    "verb"
+  ],
+  "跑": [
+    "verb"
+  ],
+  "步": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "市": [
+    "noun"
+  ],
+  "业": [
+    "noun",
+    "verb"
+  ],
+  "牙": [
+    "noun"
+  ],
+  "肯": [
+    "verb"
+  ],
+  "对不起": [],
+  "lesson future": [],
+  "lesson progressive tense": [],
+  "lession 不 vs 没": [],
+  "喂": [
+    "verb",
+    "noun"
+  ],
+  "士": [
+    "noun"
+  ],
+  "目": [
+    "noun"
+  ],
+  "果": [
+    "noun",
+    "adverb"
+  ],
+  "如": [],
+  "之": [],
+  "人之": [],
+  "常情": [
+    "noun"
+  ],
+  "人之常情": [],
+  "洗": [
+    "noun",
+    "verb"
+  ],
+  "脸": [
+    "noun"
+  ],
+  "开会": [
+    "verb"
+  ],
+  "游泳馆": [],
+  "帽子": [
+    "noun"
+  ],
+  "生日帽": [],
+  "眼镜": [
+    "noun"
+  ],
+  "太阳镜": [],
+  "阳": [
+    "adjective",
+    "noun",
+    "adverb"
+  ],
+  "眼睛": [
+    "noun"
+  ],
+  "超人": [
+    "noun",
+    "verb"
+  ],
+  "镜": [
+    "noun"
+  ],
+  "摸": [
+    "verb",
+    "noun"
+  ],
+  "洗澡": [
+    "verb"
+  ],
+  "去世": [
+    "verb"
+  ],
+  "世": [
+    "noun"
+  ],
+  "马": [
+    "noun",
+    "adjective"
+  ],
+  "忘记": [
+    "verb"
+  ],
+  "冰激凌": [],
+  "激动": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "凌": [
+    "verb"
+  ],
+  "扔": [
+    "verb"
+  ],
+  "整理": [
+    "verb"
+  ],
+  "整": [
+    "adjective",
+    "adverb"
+  ],
+  "灰色": [
+    "noun",
+    "adjective"
+  ],
+  "垃圾桶": [
+    "noun"
+  ],
+  "桶": [
+    "noun"
+  ],
+  "垃圾": [
+    "noun"
+  ],
+  "沙拉": [
+    "noun"
+  ],
+  "沙": [
+    "noun",
+    "adjective"
+  ],
+  "拉": [
+    "verb",
+    "noun",
+    "adjective"
+  ],
+  "干": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "东西": [
+    "noun"
+  ],
+  "东": [
+    "noun",
+    "adjective"
+  ],
+  "鸡爪": [],
+  "爪": [
+    "noun"
+  ],
+  "蜗牛": [
+    "noun"
+  ],
+  "佛": [
+    "noun",
+    "adverb"
+  ],
+  "银河": [
+    "noun"
+  ],
+  "潜": [
+    "adjective",
+    "verb",
+    "adverb"
+  ],
+  "潜过水": [],
+  "蹦极": [],
+  "蹦": [
+    "verb",
+    "adjective"
+  ],
+  "极": [
+    "noun",
+    "adverb",
+    "adjective"
+  ],
+  "南美洲": [
+    "noun"
+  ],
+  "见过": [],
+  "野生动物": [
+    "noun"
+  ],
+  "老虎": [
+    "noun"
+  ],
+  "打架": [
+    "verb",
+    "noun"
+  ],
+  "老虎打架": [],
+  "动物园": [
+    "noun"
+  ],
+  "广州": [
+    "noun"
+  ],
+  "赢了": [],
+  "南": [
+    "adjective",
+    "noun"
+  ],
+  "洲": [
+    "noun"
+  ],
+  "银": [
+    "adjective",
+    "noun"
+  ],
+  "河": [
+    "noun"
+  ],
+  "商店": [
+    "noun"
+  ],
+  "水果店": [],
+  "你家附近有水果店吗": [],
+  "离我家15分有一个学校": [],
+  "认识": [
+    "noun",
+    "verb"
+  ],
+  "离开": [
+    "verb",
+    "noun",
+    "adverb"
+  ],
+  "语言": [
+    "noun"
+  ],
+  "言": [
+    "verb",
+    "noun"
+  ],
+  "感兴趣": [],
+  "我对做饭感兴趣": [],
+  "不太": [],
+  "泰国": [
+    "noun",
+    "adjective"
+  ],
+  "印度": [
+    "noun"
+  ],
+  "韩国": [
+    "noun"
+  ],
+  "日本": [
+    "noun",
+    "adjective"
+  ],
+  "俄国": [
+    "noun"
+  ],
+  "德国": [
+    "noun"
+  ],
+  "踢足球": [],
+  "趣": [
+    "noun",
+    "adjective"
+  ],
+  "商": [
+    "noun",
+    "adjective"
+  ],
+  "地铁站": [
+    "noun"
+  ],
+  "地铁": [
+    "noun"
+  ],
+  "地": [
+    "noun",
+    "adjective"
+  ],
+  "铁": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "金子": [],
+  "棕色": [
+    "noun"
+  ],
+  "大多数": [
+    "noun"
+  ],
+  "短": [
+    "noun",
+    "adjective",
+    "adverb",
+    "verb"
+  ],
+  "不长不短": [],
+  "耳朵": [
+    "noun"
+  ],
+  "野猫": [
+    "noun"
+  ],
+  "兔子": [
+    "noun"
+  ],
+  "词": [
+    "noun"
+  ],
+  "我女儿会说第一个中文词是“兔子”": [],
+  "松鼠": [
+    "noun"
+  ],
+  "猪": [
+    "noun"
+  ],
+  "猪肉汉堡包": [],
+  "汉堡包": [
+    "noun"
+  ],
+  "狮子": [
+    "noun"
+  ],
+  "狮子王": [],
+  "发": [
+    "noun",
+    "verb"
+  ],
+  "蝙蝠": [
+    "noun"
+  ],
+  "蝙蝠侠": [],
+  "我从没吃过": [],
+  "下次": [],
+  "下下个星期": [],
+  "旅游": [
+    "noun"
+  ],
+  "春节": [
+    "noun"
+  ],
+  "考拉": [],
+  "左": [
+    "adverb",
+    "noun"
+  ],
+  "右": [
+    "noun",
+    "adjective"
+  ],
+  "左耳进右耳出": [],
+  "左手": [],
+  "右手": [
+    "adjective"
+  ],
+  "脚": [
+    "noun"
+  ],
+  "腿": [
+    "noun"
+  ],
+  "害怕": [
+    "verb"
+  ],
+  "吃惊": [
+    "verb"
+  ],
+  "生气": [
+    "adjective",
+    "verb",
+    "noun"
+  ],
+  "难过": [],
+  "难": [
+    "adjective",
+    "noun"
+  ],
+  "害": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "受伤的狗": [],
+  "受伤": [
+    "verb"
+  ],
+  "睁一只眼闭一只眼": [],
+  "我的同事昨天晚了，我老板睁一只眼闭一只眼": [],
+  "头": [
+    "noun",
+    "adjective"
+  ],
+  "胡子": [
+    "noun"
+  ],
+  "嘴巴": [
+    "noun"
+  ],
+  "牙齿": [
+    "noun"
+  ],
+  "电视上": [],
+  "怎么了": [],
+  "疼": [
+    "noun",
+    "verb"
+  ],
+  "舒服": [
+    "noun",
+    "adverb",
+    "adjective"
+  ],
+  "药": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "大家": [],
+  "七嘴八舌": [],
+  "嘴": [
+    "noun"
+  ],
+  "舌": [
+    "noun"
+  ],
+  "堡": [
+    "noun"
+  ],
+  "晚了": [],
+  "只": [
+    "adverb",
+    "adjective",
+    "noun"
+  ],
+  "闭": [
+    "verb"
+  ],
+  "睁": [
+    "verb"
+  ],
+  "打开门": [],
+  "张": [
+    "verb",
+    "noun"
+  ],
+  "张开嘴": [],
+  "理发师": [
+    "noun"
+  ],
+  "回来": [
+    "verb",
+    "noun"
+  ],
+  "同意": [
+    "verb",
+    "noun"
+  ],
+  "染": [
+    "verb"
+  ],
+  "回了家": [],
+  "晚安": [],
+  "算命": [
+    "noun"
+  ],
+  "木": [
+    "adjective",
+    "noun"
+  ],
+  "森林": [
+    "noun"
+  ],
+  "巢": [
+    "noun"
+  ],
+  "从": [
+    "adjective",
+    "verb",
+    "adverb",
+    "noun"
+  ],
+  "众": [
+    "adjective",
+    "noun"
+  ],
+  "囚": [
+    "noun"
+  ],
+  "美": [
+    "adjective"
+  ],
+  "安全": [
+    "noun",
+    "adjective"
+  ],
+  "母亲": [
+    "noun"
+  ],
+  "抱": [
+    "verb",
+    "noun"
+  ],
+  "泡": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "炮": [
+    "noun",
+    "verb"
+  ],
+  "袍": [
+    "noun"
+  ],
+  "饱": [
+    "adjective",
+    "verb"
+  ],
+  "苞": [
+    "adjective",
+    "noun"
+  ],
+  "鲍": [
+    "noun"
+  ],
+  "肩": [
+    "noun"
+  ],
+  "胃": [
+    "noun"
+  ],
+  "推": [
+    "verb"
+  ],
+  "燥": [
+    "adjective"
+  ],
+  "雷": [
+    "noun",
+    "verb"
+  ],
+  "踢": [
+    "noun",
+    "verb"
+  ],
+  "草": [
+    "noun",
+    "adjective"
+  ],
+  "一样": [
+    "adverb",
+    "adjective"
+  ],
+  "级": [
+    "noun"
+  ],
+  "剧": [
+    "noun",
+    "adjective"
+  ],
+  "电视剧": [
+    "noun"
+  ],
+  "听力": [
+    "noun"
+  ],
+  "國語": [],
+  "尸体": [
+    "noun"
+  ],
+  "体": [
+    "noun",
+    "adjective"
+  ],
+  "度": [
+    "noun",
+    "verb"
+  ],
+  "找": [
+    "verb"
+  ],
+  "挣": [
+    "verb"
+  ],
+  "服": [
+    "noun",
+    "verb"
+  ],
+  "股票": [
+    "noun"
+  ],
+  "部分": [
+    "noun"
+  ],
+  "同时": [
+    "adverb",
+    "adjective"
+  ],
+  "通过": [
+    "verb",
+    "noun",
+    "adverb"
+  ],
+  "部": [
+    "noun"
+  ],
+  "迪斯尼": [],
+  "深圳": [],
+  "好久不见": [],
+  "lesson past": [],
+  "出租车": [
+    "noun"
+  ],
+  "试一试": [],
+  "试": [
+    "noun",
+    "verb"
+  ],
+  "长城": [
+    "noun"
+  ],
+  "帮助": [
+    "verb",
+    "noun"
+  ],
+  "支持": [
+    "verb",
+    "noun"
+  ],
+  "感谢你对我的帮助和支持": [],
+  "城市": [
+    "noun"
+  ],
+  "从澳大利亚到西安飞10小时": [],
+  "皮蛋": [
+    "noun"
+  ],
+  "榴莲": [],
+  "皮": [
+    "noun",
+    "verb"
+  ],
+  "力": [
+    "noun"
+  ],
+  "克": [
+    "noun",
+    "verb"
+  ],
+  "巧": [
+    "adjective",
+    "adverb"
+  ],
+  "支": [
+    "verb",
+    "noun"
+  ],
+  "持": [
+    "verb"
+  ],
+  "深": [
+    "adjective",
+    "adverb"
+  ],
+  "租": [
+    "verb"
+  ],
+  "感觉": [
+    "noun",
+    "verb"
+  ],
+  "lesson state verb": [],
+  "放": [
+    "verb"
+  ],
+  "身": [
+    "noun"
+  ],
+  "身体": [
+    "noun"
+  ],
+  "地图": [
+    "noun"
+  ],
+  "健身房": [
+    "noun"
+  ],
+  "健": [
+    "adjective",
+    "verb"
+  ],
+  "旁边": [
+    "noun",
+    "adjective"
+  ],
+  "沙发": [
+    "noun"
+  ],
+  "件": [
+    "noun"
+  ],
+  "这儿": [
+    "adverb"
+  ],
+  "那儿": [
+    "adverb"
+  ],
+  "应该": [
+    "verb"
+  ],
+  "外面": [
+    "adverb",
+    "noun"
+  ],
+  "餐巾纸": [
+    "noun"
+  ],
+  "纸": [
+    "noun"
+  ],
+  "巾": [
+    "noun"
+  ],
+  "lesson can": [],
+  "祝贺": [
+    "verb",
+    "adjective"
+  ],
+  "学习": [
+    "noun",
+    "verb"
+  ],
+  "lesson would like": [],
+  "商场": [
+    "noun"
+  ],
+  "面馆": [],
+  "这些": [],
+  "据": [
+    "noun",
+    "adverb",
+    "verb",
+    "adjective"
+  ],
+  "时": [
+    "noun",
+    "adverb"
+  ],
+  "醒来": [
+    "verb"
+  ],
+  "醒": [
+    "noun",
+    "verb"
+  ],
+  "起来": [
+    "verb",
+    "noun"
+  ],
+  "一般来说": [],
+  "就": [
+    "adverb",
+    "verb"
+  ],
+  "才": [
+    "adverb",
+    "noun"
+  ],
+  "后面": [
+    "noun",
+    "adverb"
+  ],
+  "前面": [
+    "noun",
+    "adverb"
+  ],
+  "上面": [
+    "noun",
+    "adjective"
+  ],
+  "下面": [
+    "adjective",
+    "adverb"
+  ],
+  "里面": [
+    "adjective",
+    "noun",
+    "adverb"
+  ],
+  "1岁零一个月": [],
+  "一些": [
+    "adjective",
+    "adverb"
+  ],
+  "小姐": [
+    "noun"
+  ],
+  "回去": [
+    "verb"
+  ],
+  "我的": [],
+  "你的": [],
+  "这块地": [],
+  "蛋糕": [
+    "noun"
+  ],
+  "看见": [
+    "verb",
+    "noun"
+  ],
+  "卖": [
+    "verb",
+    "noun"
+  ],
+  "答": [
+    "verb"
+  ],
+  "联系": [
+    "noun",
+    "verb"
+  ],
+  "公寓": [
+    "noun"
+  ],
+  "可爱": [
+    "adjective"
+  ],
+  "记得": [
+    "verb"
+  ],
+  "开车的": [],
+  "公共汽车": [
+    "noun"
+  ],
+  "这么": [
+    "adverb",
+    "adjective"
+  ],
+  "怎么": [
+    "adverb"
+  ],
+  "送": [
+    "verb"
+  ],
+  "或者": [
+    "adverb"
+  ],
+  "沙滩": [
+    "noun"
+  ],
+  "写字": [],
+  "字": [
+    "noun",
+    "adjective"
+  ],
+  "公交": [],
+  "滴滴": [],
+  "电瓶车": [
+    "noun"
+  ],
+  "瓶": [
+    "noun"
+  ],
+  "船": [
+    "noun"
+  ],
+  "情景": [
+    "noun"
+  ],
+  "报价": [
+    "noun"
+  ],
+  "尽快": [
+    "adverb"
+  ],
+  "报": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "价": [
+    "noun"
+  ],
+  "寓": [
+    "noun",
+    "verb"
+  ],
+  "丈": [
+    "noun"
+  ],
+  "办公室": [
+    "noun"
+  ],
+  "lesson than": [],
+  "差不多": [
+    "adverb",
+    "adjective"
+  ],
+  "大概": [
+    "adverb",
+    "adjective"
+  ],
+  "价格": [
+    "noun"
+  ],
+  "吧": [
+    "adjective"
+  ],
+  "法语歌": [],
+  "海边": [
+    "noun"
+  ],
+  "堵车": [],
+  "比较旧": [],
+  "旧": [
+    "adjective",
+    "noun"
+  ],
+  "较": [
+    "adverb",
+    "verb"
+  ],
+  "比": [
+    "noun",
+    "verb"
+  ],
+  "植物": [
+    "verb",
+    "noun",
+    "adjective"
+  ],
+  "种花": [],
+  "手机盒": [],
+  "游戏盒": [],
+  "耳机盒": [],
+  "旅游箱": [],
+  "深蓝": [],
+  "西方人": [
+    "noun"
+  ],
+  "树": [
+    "noun",
+    "verb"
+  ],
+  "甜筒": [],
+  "中间": [
+    "adjective",
+    "noun"
+  ],
+  "层": [
+    "noun",
+    "adjective"
+  ],
+  "盒子": [
+    "noun"
+  ],
+  "汉堡王": [],
+  "菠萝": [
+    "noun"
+  ],
+  "花瓶": [
+    "noun"
+  ],
+  "哈喽": [],
+  "使用": [
+    "verb",
+    "noun"
+  ],
+  "细节": [
+    "noun"
+  ],
+  "直接": [
+    "adjective",
+    "adverb",
+    "noun"
+  ],
+  "邮件": [
+    "noun"
+  ],
+  "先": [
+    "adjective",
+    "adverb"
+  ],
+  "那边": [
+    "adverb"
+  ],
+  "哭": [
+    "verb"
+  ],
+  "办": [
+    "verb"
+  ],
+  "概": [
+    "adjective",
+    "noun"
+  ],
+  "筒": [
+    "noun"
+  ],
+  "甜": [
+    "adjective"
+  ],
+  "戏": [
+    "noun",
+    "verb"
+  ],
+  "植": [
+    "verb"
+  ],
+  "细": [
+    "adjective",
+    "adverb"
+  ],
+  "方": [
+    "adjective",
+    "noun",
+    "adverb"
+  ],
+  "稍等": [],
+  "稍": [
+    "adverb"
+  ],
+  "饥": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "玩游戏": [],
+  "蛋仔": [],
+  "员工": [
+    "noun"
+  ],
+  "条": [
+    "noun"
+  ],
+  "紫色": [
+    "noun"
+  ],
+  "真": [
+    "adjective",
+    "adverb"
+  ],
+  "粉色": [],
+  "十多件": [],
+  "二十多件": [],
+  "玫瑰花": [],
+  "听说": [
+    "verb"
+  ],
+  "特别": [
+    "adverb",
+    "adjective"
+  ],
+  "购物狂": [],
+  "工作狂": [],
+  "狂": [
+    "adjective",
+    "adverb"
+  ],
+  "比9件多黑色的衣服。": [],
+  "比十少件裙子.": [],
+  "运动": [
+    "noun"
+  ],
+  "一千米": [],
+  "运": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "伤": [
+    "verb",
+    "noun"
+  ],
+  "受": [
+    "verb"
+  ],
+  "堵": [
+    "verb",
+    "adjective"
+  ],
+  "接": [
+    "verb"
+  ],
+  "景": [
+    "noun",
+    "verb"
+  ],
+  "几次": [
+    "noun"
+  ],
+  "购": [
+    "noun",
+    "verb"
+  ],
+  "票": [
+    "noun"
+  ],
+  "厨房": [
+    "noun"
+  ],
+  "客厅": [
+    "noun"
+  ],
+  "红包": [],
+  "10分钟后": [],
+  "多工作，少休息": [],
+  "怎么+adj": [],
+  "玩具": [
+    "noun"
+  ],
+  "鼠标": [
+    "noun"
+  ],
+  "化妆": [
+    "noun",
+    "verb"
+  ],
+  "楼上": [
+    "adverb",
+    "noun"
+  ],
+  "共用": [],
+  "蝴蝶": [
+    "noun"
+  ],
+  "乌龟": [
+    "noun"
+  ],
+  "一块西瓜": [],
+  "鸟": [
+    "noun"
+  ],
+  "青蛙": [
+    "noun"
+  ],
+  "鹅": [
+    "noun"
+  ],
+  "饿": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "鹅很饿": [],
+  "犀牛": [
+    "noun"
+  ],
+  "叶子": [
+    "noun"
+  ],
+  "斑马": [
+    "noun"
+  ],
+  "梨": [
+    "noun"
+  ],
+  "听见": [
+    "verb"
+  ],
+  "充电": [],
+  "台灯": [
+    "noun"
+  ],
+  "薯条": [],
+  "舒": [
+    "verb"
+  ],
+  "者": [
+    "noun"
+  ],
+  "薯": [
+    "noun"
+  ],
+  "化": [
+    "verb"
+  ],
+  "格": [
+    "noun"
+  ],
+  "标": [
+    "verb",
+    "noun"
+  ],
+  "台": [
+    "noun",
+    "adjective"
+  ],
+  "千": [
+    "noun"
+  ],
+  "lesson 多 he 几": [],
+  "地方": [
+    "adjective",
+    "noun"
+  ],
+  "拍": [
+    "noun",
+    "verb"
+  ],
+  "照片": [
+    "noun"
+  ],
+  "拍的照片": [],
+  "只有": [
+    "adverb"
+  ],
+  "机票": [
+    "noun"
+  ],
+  "港币": [],
+  "澳元": [],
+  "先进": [
+    "adjective",
+    "verb"
+  ],
+  "蜡烛": [
+    "noun"
+  ],
+  "蜡": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "烛": [
+    "noun"
+  ],
+  "几千个": [],
+  "几百个": [],
+  "十几个": [],
+  "几十个": [],
+  "比如": [
+    "adjective",
+    "adverb"
+  ],
+  "云": [
+    "noun",
+    "verb"
+  ],
+  "中心": [
+    "noun"
+  ],
+  "数据中心": [],
+  "数字": [
+    "adjective",
+    "noun"
+  ],
+  "吹风": [],
+  "鞋子": [],
+  "哑铃": [],
+  "吹风 机": [],
+  "撸铁": [],
+  "暖热": [],
+  "房间": [
+    "noun"
+  ],
+  "吉他": [
+    "noun"
+  ],
+  "吉": [
+    "adjective"
+  ],
+  "弹吉他": [],
+  "弹钢琴": [],
+  "钢琴": [
+    "noun"
+  ],
+  "钢": [
+    "noun"
+  ],
+  "弹": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "地上": [],
+  "乱": [
+    "adjective",
+    "adverb",
+    "noun",
+    "verb"
+  ],
+  "拍照": [
+    "verb"
+  ],
+  "风景": [
+    "noun"
+  ],
+  "最好": [
+    "adjective"
+  ],
+  "表": [
+    "noun",
+    "verb"
+  ],
+  "袋子": [
+    "noun"
+  ],
+  "整洁": [
+    "adjective",
+    "adverb"
+  ],
+  "猜": [
+    "verb"
+  ],
+  "爱好": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "年龄": [
+    "noun"
+  ],
+  "充电宝": [],
+  "更亮": [],
+  "健康": [
+    "noun",
+    "adjective"
+  ],
+  "礼物": [
+    "noun"
+  ],
+  "世界上": [
+    "adjective"
+  ],
+  "界": [
+    "noun"
+  ],
+  "附": [
+    "verb"
+  ],
+  "铅笔": [
+    "noun"
+  ],
+  "铅": [
+    "noun",
+    "adjective"
+  ],
+  "晴": [
+    "adjective"
+  ],
+  "所以": [
+    "adverb"
+  ],
+  "矮": [
+    "adjective"
+  ],
+  "胖": [
+    "adjective",
+    "noun"
+  ],
+  "瘦": [
+    "adjective"
+  ],
+  "方便": [
+    "adjective",
+    "noun",
+    "verb",
+    "adverb"
+  ],
+  "有用": [
+    "adjective"
+  ],
+  "受欢迎": [
+    "adjective"
+  ],
+  "搞笑": [],
+  "想法": [
+    "noun",
+    "verb"
+  ],
+  "温度": [
+    "noun"
+  ],
+  "公斤": [
+    "noun"
+  ],
+  "皮肤": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "肤": [
+    "noun"
+  ],
+  "方便面": [],
+  "希望": [
+    "verb"
+  ],
+  "生病": [
+    "adjective",
+    "verb"
+  ],
+  "介绍": [
+    "noun",
+    "verb"
+  ],
+  "别": [
+    "verb",
+    "adjective"
+  ],
+  "买车票": [],
+  "吹": [
+    "verb"
+  ],
+  "绍": [
+    "verb"
+  ],
+  "介": [
+    "verb"
+  ],
+  "予": [
+    "verb"
+  ],
+  "照": [
+    "verb"
+  ],
+  "那些": [
+    "adjective"
+  ],
+  "销": [
+    "noun",
+    "verb"
+  ],
+  "在我看来": [],
+  "太阳花": [],
+  "平板": [
+    "adjective",
+    "noun"
+  ],
+  "水龙头": [
+    "noun"
+  ],
+  "星巴克": [],
+  "星": [
+    "noun"
+  ],
+  "巴": [
+    "verb"
+  ],
+  "眉笔": [
+    "noun"
+  ],
+  "猜谜语": [],
+  "谜": [
+    "noun",
+    "verb"
+  ],
+  "粉丝": [],
+  "灯": [
+    "noun"
+  ],
+  "关水龙头": [],
+  "关灯": [],
+  "然后": [
+    "adverb"
+  ],
+  "眉毛": [
+    "noun"
+  ],
+  "龙": [
+    "noun",
+    "adjective"
+  ],
+  "影子": [
+    "noun"
+  ],
+  "竹子": [
+    "noun"
+  ],
+  "看书的时候": [],
+  "中文版": [],
+  "留学生": [
+    "noun"
+  ],
+  "便": [
+    "adverb",
+    "adjective",
+    "verb",
+    "noun"
+  ],
+  "币": [
+    "noun"
+  ],
+  "迎": [
+    "verb"
+  ],
+  "龄": [
+    "noun"
+  ],
+  "厘米": [
+    "noun"
+  ],
+  "明白": [
+    "verb",
+    "adjective",
+    "noun"
+  ],
+  "声音": [
+    "noun"
+  ],
+  "打网球": [],
+  "网球": [
+    "noun"
+  ],
+  "懂": [
+    "verb"
+  ],
+  "下雪": [],
+  "虽然": [
+    "adverb",
+    "verb"
+  ],
+  "次次": [],
+  "报纸": [
+    "noun"
+  ],
+  "医生": [
+    "noun"
+  ],
+  "考试": [
+    "noun"
+  ],
+  "慢": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "服务员": [
+    "noun"
+  ],
+  "让": [
+    "verb"
+  ],
+  "告诉": [
+    "verb"
+  ],
+  "事情": [
+    "noun"
+  ],
+  "欢迎": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "正在": [],
+  "准备": [
+    "verb",
+    "noun"
+  ],
+  "宾馆": [
+    "noun"
+  ],
+  "宾": [
+    "noun"
+  ],
+  "路口": [
+    "noun"
+  ],
+  "阴": [
+    "noun",
+    "adjective",
+    "adverb"
+  ],
+  "别吵了": [],
+  "吵": [
+    "adjective",
+    "verb"
+  ],
+  "勺": [
+    "noun"
+  ],
+  "句子": [
+    "noun"
+  ],
+  "练习": [
+    "noun",
+    "verb"
+  ],
+  "乒乓球": [
+    "noun"
+  ],
+  "羽毛球": [
+    "noun"
+  ],
+  "类": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "球类": [],
+  "鸡腿": [],
+  "心": [
+    "noun"
+  ],
+  "lesson 得": [],
+  "马拉松": [
+    "noun"
+  ],
+  "松": [
+    "verb",
+    "noun",
+    "adjective"
+  ],
+  "猎豹": [],
+  "鸵鸟": [
+    "noun"
+  ],
+  "蜻蜓": [
+    "noun"
+  ],
+  "慢慢儿来": [],
+  "回答": [
+    "noun",
+    "verb"
+  ],
+  "感冒": [
+    "noun",
+    "verb"
+  ],
+  "开心": [
+    "verb",
+    "noun"
+  ],
+  "校服": [],
+  "放学": [
+    "verb"
+  ],
+  "净": [
+    "noun",
+    "adjective",
+    "adverb"
+  ],
+  "干净": [
+    "adjective",
+    "adverb"
+  ],
+  "查": [
+    "verb"
+  ],
+  "奶酪": [
+    "noun"
+  ],
+  "酪": [
+    "noun"
+  ],
+  "流利": [
+    "adjective"
+  ],
+  "青": [
+    "adjective",
+    "noun"
+  ],
+  "蛙": [
+    "noun"
+  ],
+  "康": [
+    "adjective"
+  ],
+  "冒": [
+    "noun",
+    "adjective"
+  ],
+  "版": [
+    "noun"
+  ],
+  "暖": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "准": [
+    "noun",
+    "adjective",
+    "verb",
+    "adverb"
+  ],
+  "备": [
+    "noun",
+    "verb",
+    "adverb"
+  ],
+  "饥饿": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "着": [
+    "verb",
+    "noun",
+    "adjective"
+  ],
+  "还不错": [],
+  "怕": [
+    "noun",
+    "verb"
+  ],
+  "告": [
+    "verb"
+  ],
+  "lesson so": [],
+  "虽": [
+    "adverb",
+    "verb"
+  ],
+  "售": [
+    "verb"
+  ],
+  "玩": [
+    "noun",
+    "verb"
+  ],
+  "游戏": [
+    "noun"
+  ],
+  "共": [
+    "adjective",
+    "adverb",
+    "verb"
+  ],
+  "趋势": [
+    "noun"
+  ],
+  "趋": [
+    "verb"
+  ],
+  "势": [
+    "noun"
+  ],
+  "奇": [
+    "adjective",
+    "verb",
+    "noun"
+  ],
+  "怪": [
+    "adjective",
+    "verb",
+    "noun"
+  ],
+  "特": [
+    "adjective",
+    "adverb",
+    "noun"
+  ],
+  "务": [
+    "noun",
+    "verb"
+  ],
+  "羽": [
+    "noun"
+  ],
+  "毛": [
+    "noun",
+    "adjective"
+  ],
+  "潜过": [],
+  "下班后": [],
+  "书店": [
+    "noun"
+  ],
+  "头疼": [
+    "noun"
+  ],
+  "做到": [
+    "verb"
+  ],
+  "做得好": [],
+  "做的事儿": [],
+  "儿子": [
+    "noun"
+  ],
+  "全部": [
+    "adjective"
+  ],
+  "分钟后": [],
+  "办法": [
+    "noun"
+  ],
+  "名单": [
+    "noun"
+  ],
+  "听不见": [],
+  "听得懂": [],
+  "听得见": [
+    "adjective"
+  ],
+  "很难听": [],
+  "怎么说": [],
+  "想到": [
+    "verb"
+  ],
+  "想好": [],
+  "意大利面": [],
+  "我做到了": [],
+  "找到": [
+    "verb"
+  ],
+  "放学后": [],
+  "最后": [
+    "adjective",
+    "adverb"
+  ],
+  "选择": [
+    "verb",
+    "noun"
+  ],
+  "燕麦": [
+    "noun"
+  ],
+  "燕麦奶": [],
+  "燕麦片": [],
+  "碗": [
+    "noun"
+  ],
+  "玩得开心": [],
+  "生日礼物": [],
+  "礼物单": [],
+  "考试题": [],
+  "袋鼠": [
+    "noun"
+  ],
+  "购物": [
+    "noun",
+    "verb"
+  ],
+  "跳远": [
+    "noun"
+  ],
+  "酸奶": [
+    "noun"
+  ],
+  "全": [
+    "adjective"
+  ],
+  "利": [
+    "noun",
+    "adjective"
+  ],
+  "店": [
+    "noun"
+  ],
+  "意": [
+    "noun",
+    "verb"
+  ],
+  "择": [
+    "verb"
+  ],
+  "法": [
+    "noun",
+    "adjective"
+  ],
+  "澡": [
+    "noun",
+    "verb"
+  ],
+  "燕": [
+    "noun"
+  ],
+  "考": [
+    "verb"
+  ],
+  "菇": [
+    "noun",
+    "verb"
+  ],
+  "选": [
+    "adjective",
+    "verb",
+    "noun"
+  ],
+  "酸": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "金": [
+    "noun"
+  ],
+  "针": [
+    "noun"
+  ],
+  "钟": [
+    "noun",
+    "verb"
+  ],
+  "题": [
+    "noun",
+    "verb"
+  ],
+  "鼠": [
+    "noun"
+  ],
+  "留": [
+    "verb"
+  ],
+  "重要": [
+    "adjective",
+    "noun"
+  ],
+  "开灯": [],
+  "我收到了邮件": [],
+  "信息": [
+    "noun"
+  ],
+  "视频": [
+    "noun"
+  ],
+  "视": [
+    "verb"
+  ],
+  "频": [
+    "noun",
+    "adverb"
+  ],
+  "听懂": [],
+  "看懂": [],
+  "学懂": [],
+  "市场": [
+    "noun"
+  ],
+  "黄金": [
+    "noun"
+  ],
+  "收集": [
+    "verb"
+  ],
+  "收": [
+    "noun",
+    "verb"
+  ],
+  "集": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "生活": [
+    "noun",
+    "verb"
+  ],
+  "活": [
+    "verb",
+    "adjective",
+    "noun",
+    "adverb"
+  ],
+  "赔": [
+    "verb"
+  ],
+  "赚": [
+    "verb",
+    "noun"
+  ],
+  "但没看": [],
+  "写错了": [],
+  "收到": [
+    "verb"
+  ],
+  "等到": [
+    "verb",
+    "adverb"
+  ],
+  "走到": [],
+  "打错了": [],
+  "大米": [],
+  "终于": [
+    "adverb"
+  ],
+  "正": [
+    "adjective",
+    "adverb",
+    "verb",
+    "noun"
+  ],
+  "再猜": [],
+  "燕麦和酸奶": [],
+  "燕麦碗": [],
+  "签合同": [],
+  "签": [
+    "verb",
+    "noun"
+  ],
+  "合同": [
+    "noun"
+  ],
+  "合": [
+    "verb",
+    "adjective",
+    "noun"
+  ],
+  "出差": [
+    "verb"
+  ],
+  "lesson V + Result": [],
+  "总结": [
+    "noun",
+    "verb"
+  ],
+  "没收": [
+    "verb"
+  ],
+  "成功": [
+    "noun",
+    "verb"
+  ],
+  "部门": [
+    "noun"
+  ],
+  "终": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "啊": [],
+  "种": [
+    "noun",
+    "verb"
+  ],
+  "心中": [],
+  "永远留": [],
+  "永远": [
+    "adverb",
+    "adjective"
+  ],
+  "永": [
+    "adverb",
+    "adjective"
+  ],
+  "就像": [],
+  "像": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "零食": [],
+  "食": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "直": [
+    "adverb",
+    "noun",
+    "adjective"
+  ],
+  "流": [
+    "verb",
+    "noun",
+    "adjective"
+  ],
+  "诉": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "蘑": [
+    "noun"
+  ],
+  "蘑菇": [
+    "noun"
+  ],
+  "记住": [
+    "verb"
+  ],
+  "忘": [
+    "verb"
+  ],
+  "一些认识": [],
+  "不到": [],
+  "不客气": [],
+  "中国火锅": [],
+  "买到": [],
+  "你买了": [],
+  "你看过": [],
+  "你说对了": [],
+  "你说得对": [],
+  "做得更好": [],
+  "可以用": [],
+  "听得对": [],
+  "听错了": [],
+  "图片": [
+    "noun"
+  ],
+  "太远了": [],
+  "如果不会": [],
+  "小苹果": [],
+  "很久": [],
+  "很久以前": [],
+  "很好": [
+    "adverb"
+  ],
+  "戏木": [],
+  "我买到了": [],
+  "我会说": [],
+  "我就": [],
+  "我找到了": [],
+  "我没听过": [],
+  "我看到了": [],
+  "才去学校": [],
+  "找对了": [],
+  "找错了": [],
+  "期频": [],
+  "没等到": [],
+  "用得更好": [],
+  "真名": [],
+  "真的": [],
+  "等到了吗": [],
+  "终于看见": [],
+  "谢谢": [
+    "noun"
+  ],
+  "还没": [],
+  "难了": [],
+  "下午": [
+    "noun"
+  ],
+  "不同颜色": [],
+  "主食": [],
+  "书房": [
+    "noun"
+  ],
+  "价外": [],
+  "你写错了": [],
+  "你可以": [],
+  "你有水吗": [],
+  "你猜对了": [],
+  "你猜错了": [],
+  "你给看我": [],
+  "你说错了": [],
+  "做好": [],
+  "做对": [],
+  "冰饥": [],
+  "准备好": [],
+  "准备好了": [],
+  "划泡": [],
+  "午烛": [],
+  "可以购物": [],
+  "号的衣服": [],
+  "吃完": [],
+  "喝完": [],
+  "在书房": [],
+  "多了一个": [],
+  "好乐": [],
+  "好了": [],
+  "学会": [
+    "verb",
+    "noun"
+  ],
+  "对你来说": [],
+  "对她来说": [],
+  "对我来说": [],
+  "少侠": [],
+  "师礼": [],
+  "年子": [],
+  "广龟师": [],
+  "很整洁": [],
+  "很长": [],
+  "很难": [],
+  "快鳄": [],
+  "戏食": [],
+  "我不": [],
+  "我们去吧": [],
+  "我们都穿": [],
+  "我家的": [],
+  "我看到": [],
+  "我穿": [],
+  "打算": [
+    "verb",
+    "noun"
+  ],
+  "找到了吗": [],
+  "找朋友": [],
+  "有一点": [],
+  "有准备好": [],
+  "有始有终": [],
+  "有的时候": [],
+  "杯子": [
+    "noun"
+  ],
+  "比如盘子": [],
+  "气球": [
+    "noun"
+  ],
+  "水卖完了": [],
+  "沙苹": [],
+  "猜对": [],
+  "猜明星": [],
+  "现场示例": [],
+  "看完": [],
+  "真的吗么": [],
+  "睡胖": [],
+  "睡苞": [],
+  "练子": [],
+  "结果补语": [],
+  "老师猜": [],
+  "菇净": [],
+  "认马": [],
+  "让我看": [],
+  "记住了": [],
+  "说对": [],
+  "课速": [],
+  "趣味练习": [],
+  "速度很慢": [],
+  "那儿添加": [],
+  "闪现": [
+    "verb"
+  ],
+  "面大": [],
+  "面条": [
+    "noun"
+  ],
+  "地毯": [
+    "noun"
+  ],
+  "容易": [
+    "adjective",
+    "adverb"
+  ],
+  "密码": [
+    "noun"
+  ],
+  "描述": [
+    "noun",
+    "verb"
+  ],
+  "握手": [
+    "verb"
+  ],
+  "摔坏": [
+    "verb"
+  ],
+  "收拾": [
+    "verb",
+    "noun"
+  ],
+  "敬礼": [
+    "verb"
+  ],
+  "机器人": [
+    "noun"
+  ],
+  "清楚": [
+    "adjective",
+    "verb"
+  ],
+  "美丽": [
+    "adjective"
+  ],
+  "翻译": [
+    "noun",
+    "verb"
+  ],
+  "象": [
+    "noun",
+    "verb"
+  ],
+  "邻居": [
+    "noun"
+  ],
+  "钥匙": [
+    "noun"
+  ],
+  "不": [
+    "adverb",
+    "adjective",
+    "noun"
+  ],
+  "专": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "丢": [
+    "verb"
+  ],
+  "主": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "丽": [
+    "noun",
+    "adjective"
+  ],
+  "久": [
+    "adverb",
+    "noun"
+  ],
+  "么": [],
+  "乌": [
+    "adjective",
+    "noun"
+  ],
+  "乎": [],
+  "乒": [
+    "noun"
+  ],
+  "乓": [],
+  "习": [
+    "verb",
+    "noun"
+  ],
+  "了": [
+    "verb",
+    "adjective"
+  ],
+  "亚": [
+    "adjective"
+  ],
+  "些": [
+    "adjective"
+  ],
+  "交": [
+    "verb",
+    "noun",
+    "adjective",
+    "adverb"
+  ],
+  "亲": [
+    "noun",
+    "verb",
+    "adjective",
+    "adverb"
+  ],
+  "什": [
+    "adjective"
+  ],
+  "仔": [
+    "adjective",
+    "noun"
+  ],
+  "以": [
+    "adverb",
+    "verb"
+  ],
+  "们": [],
+  "伦": [
+    "noun",
+    "verb"
+  ],
+  "使": [
+    "verb",
+    "noun",
+    "adjective"
+  ],
+  "侠": [
+    "noun"
+  ],
+  "俄": [
+    "adjective"
+  ],
+  "候": [
+    "noun",
+    "verb"
+  ],
+  "儿": [
+    "noun"
+  ],
+  "充": [
+    "verb",
+    "adjective"
+  ],
+  "兔": [
+    "noun"
+  ],
+  "其": [
+    "adjective"
+  ],
+  "具": [
+    "noun"
+  ],
+  "冲": [
+    "noun",
+    "verb",
+    "adjective",
+    "adverb"
+  ],
+  "功": [
+    "noun"
+  ],
+  "助": [
+    "verb"
+  ],
+  "匙": [
+    "noun"
+  ],
+  "区": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "卧": [
+    "verb"
+  ],
+  "印": [
+    "verb",
+    "noun"
+  ],
+  "厅": [
+    "noun"
+  ],
+  "厕": [
+    "noun",
+    "verb"
+  ],
+  "厘": [
+    "adjective"
+  ],
+  "厨": [
+    "noun"
+  ],
+  "参": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "友": [
+    "adjective",
+    "adverb"
+  ],
+  "句": [
+    "noun"
+  ],
+  "叶": [
+    "noun"
+  ],
+  "吗": [
+    "noun"
+  ],
+  "命": [
+    "noun"
+  ],
+  "咖": [
+    "noun"
+  ],
+  "哈": [
+    "noun"
+  ],
+  "哑": [
+    "adjective"
+  ],
+  "哥": [
+    "noun"
+  ],
+  "唱": [
+    "noun",
+    "verb"
+  ],
+  "啡": [
+    "noun"
+  ],
+  "啤": [
+    "noun"
+  ],
+  "喽": [],
+  "器": [
+    "noun"
+  ],
+  "回": [
+    "verb",
+    "adjective"
+  ],
+  "國": [],
+  "圳": [],
+  "圾": [],
+  "坏": [
+    "adjective",
+    "noun",
+    "verb",
+    "adverb"
+  ],
+  "垃": [
+    "noun"
+  ],
+  "城": [
+    "noun"
+  ],
+  "声": [
+    "noun"
+  ],
+  "夫": [
+    "noun"
+  ],
+  "失": [
+    "verb",
+    "noun"
+  ],
+  "套": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "女": [
+    "noun"
+  ],
+  "妆": [
+    "noun",
+    "verb"
+  ],
+  "妹": [
+    "noun"
+  ],
+  "始": [
+    "noun",
+    "verb"
+  ],
+  "姐": [
+    "noun"
+  ],
+  "子": [
+    "noun"
+  ],
+  "孩": [
+    "noun"
+  ],
+  "安": [
+    "adjective",
+    "verb",
+    "noun"
+  ],
+  "定": [
+    "verb",
+    "adjective",
+    "adverb"
+  ],
+  "宜": [
+    "adjective"
+  ],
+  "客": [
+    "noun",
+    "adjective"
+  ],
+  "室": [
+    "noun"
+  ],
+  "容": [
+    "verb",
+    "noun"
+  ],
+  "密": [
+    "adjective"
+  ],
+  "尸": [
+    "noun"
+  ],
+  "尼": [
+    "noun"
+  ],
+  "尽": [
+    "adjective",
+    "verb",
+    "adverb"
+  ],
+  "居": [
+    "noun",
+    "verb"
+  ],
+  "州": [
+    "noun"
+  ],
+  "希": [
+    "verb",
+    "adjective"
+  ],
+  "帮": [
+    "verb",
+    "noun",
+    "adjective"
+  ],
+  "帽": [
+    "noun"
+  ],
+  "广": [
+    "adjective",
+    "verb"
+  ],
+  "应": [
+    "noun",
+    "verb"
+  ],
+  "弟": [
+    "noun"
+  ],
+  "影": [
+    "noun",
+    "adjective"
+  ],
+  "得": [
+    "verb",
+    "adjective"
+  ],
+  "快": [
+    "adjective",
+    "adverb",
+    "noun",
+    "verb"
+  ],
+  "怎": [
+    "adverb"
+  ],
+  "思": [
+    "verb",
+    "noun"
+  ],
+  "悉": [
+    "verb",
+    "adverb"
+  ],
+  "惊": [
+    "verb"
+  ],
+  "或": [
+    "adverb"
+  ],
+  "房": [
+    "noun"
+  ],
+  "披": [
+    "verb"
+  ],
+  "拾": [
+    "adjective",
+    "verb"
+  ],
+  "描": [
+    "verb"
+  ],
+  "握": [
+    "verb"
+  ],
+  "搞": [
+    "verb"
+  ],
+  "摔": [
+    "verb"
+  ],
+  "撸": [],
+  "敦": [
+    "adjective"
+  ],
+  "敬": [
+    "verb"
+  ],
+  "文": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "斑": [
+    "noun",
+    "adjective"
+  ],
+  "斤": [
+    "noun"
+  ],
+  "斯": [
+    "adjective"
+  ],
+  "旁": [
+    "noun",
+    "adverb",
+    "adjective"
+  ],
+  "旅": [
+    "noun"
+  ],
+  "易": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "昨": [
+    "noun"
+  ],
+  "朋": [
+    "noun"
+  ],
+  "望": [
+    "verb"
+  ],
+  "期": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "朵": [],
+  "李": [
+    "noun"
+  ],
+  "杨": [
+    "noun"
+  ],
+  "林": [
+    "noun"
+  ],
+  "架": [
+    "noun"
+  ],
+  "柠": [
+    "noun"
+  ],
+  "柿": [
+    "noun"
+  ],
+  "校": [
+    "noun",
+    "verb"
+  ],
+  "桌": [
+    "noun"
+  ],
+  "棕": [
+    "noun"
+  ],
+  "森": [
+    "noun",
+    "adjective"
+  ],
+  "椅": [
+    "noun"
+  ],
+  "椒": [
+    "noun"
+  ],
+  "楚": [
+    "adjective",
+    "noun"
+  ],
+  "榴": [
+    "noun"
+  ],
+  "橘": [
+    "noun"
+  ],
+  "橙": [
+    "adjective",
+    "noun"
+  ],
+  "檬": [
+    "noun"
+  ],
+  "歌": [
+    "noun"
+  ],
+  "母": [
+    "noun"
+  ],
+  "毯": [
+    "noun"
+  ],
+  "气": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "水": [
+    "noun",
+    "adjective"
+  ],
+  "汉": [
+    "noun"
+  ],
+  "汽": [
+    "noun"
+  ],
+  "没": [
+    "adverb",
+    "verb",
+    "adjective"
+  ],
+  "治": [
+    "verb",
+    "noun"
+  ],
+  "波": [
+    "noun"
+  ],
+  "泰": [
+    "adjective",
+    "noun"
+  ],
+  "泳": [
+    "noun",
+    "verb"
+  ],
+  "洁": [
+    "adjective"
+  ],
+  "洋": [
+    "adjective",
+    "noun"
+  ],
+  "浪": [
+    "noun",
+    "adjective"
+  ],
+  "海": [
+    "noun",
+    "adjective"
+  ],
+  "清": [
+    "adjective",
+    "noun",
+    "adverb"
+  ],
+  "温": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "滩": [
+    "noun"
+  ],
+  "滴": [
+    "noun",
+    "verb"
+  ],
+  "澳": [
+    "noun"
+  ],
+  "激": [
+    "verb",
+    "adjective"
+  ],
+  "灰": [
+    "adjective",
+    "noun"
+  ],
+  "烤": [
+    "adjective",
+    "verb",
+    "noun"
+  ],
+  "然": [
+    "adverb",
+    "adjective"
+  ],
+  "爬": [
+    "noun",
+    "verb"
+  ],
+  "爷": [
+    "noun"
+  ],
+  "犀": [],
+  "狐": [
+    "noun"
+  ],
+  "狗": [
+    "noun"
+  ],
+  "狮": [
+    "noun"
+  ],
+  "狸": [
+    "noun"
+  ],
+  "猎": [
+    "noun",
+    "verb"
+  ],
+  "猕": [
+    "noun"
+  ],
+  "猫": [
+    "noun"
+  ],
+  "猴": [
+    "noun"
+  ],
+  "玉": [
+    "noun",
+    "adjective"
+  ],
+  "王": [
+    "noun"
+  ],
+  "玫": [
+    "noun"
+  ],
+  "琴": [
+    "noun"
+  ],
+  "瑰": [
+    "adjective"
+  ],
+  "瓜": [
+    "noun"
+  ],
+  "男": [
+    "adjective",
+    "noun"
+  ],
+  "画": [
+    "noun",
+    "verb"
+  ],
+  "病": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "的": [
+    "noun",
+    "adverb"
+  ],
+  "盒": [
+    "noun"
+  ],
+  "盘": [
+    "noun",
+    "verb"
+  ],
+  "眉": [
+    "noun"
+  ],
+  "眼": [
+    "noun",
+    "adjective"
+  ],
+  "睛": [
+    "noun"
+  ],
+  "睡": [
+    "verb"
+  ],
+  "码": [
+    "noun"
+  ],
+  "祝": [
+    "verb"
+  ],
+  "童": [
+    "noun"
+  ],
+  "端": [
+    "verb",
+    "noun",
+    "adjective"
+  ],
+  "竹": [
+    "noun"
+  ],
+  "笑": [
+    "noun",
+    "verb",
+    "adjective"
+  ],
+  "筝": [
+    "noun"
+  ],
+  "简": [
+    "adjective",
+    "noun"
+  ],
+  "算": [
+    "verb",
+    "adverb"
+  ],
+  "管": [
+    "noun",
+    "verb"
+  ],
+  "粉": [
+    "noun",
+    "adjective"
+  ],
+  "糕": [
+    "noun"
+  ],
+  "紫": [
+    "adjective"
+  ],
+  "线": [
+    "noun"
+  ],
+  "翻": [
+    "noun",
+    "verb"
+  ],
+  "耳": [
+    "noun",
+    "adjective"
+  ],
+  "聊": [
+    "verb",
+    "adverb"
+  ],
+  "联": [
+    "noun",
+    "verb"
+  ],
+  "聪": [
+    "adjective"
+  ],
+  "股": [
+    "noun"
+  ],
+  "胡": [
+    "noun",
+    "adverb"
+  ],
+  "脑": [
+    "noun"
+  ],
+  "至": [
+    "adverb",
+    "verb"
+  ],
+  "舞": [
+    "noun",
+    "verb"
+  ],
+  "芒": [
+    "noun"
+  ],
+  "英": [
+    "noun",
+    "adjective"
+  ],
+  "苹": [
+    "noun"
+  ],
+  "茄": [
+    "noun"
+  ],
+  "茶": [
+    "noun"
+  ],
+  "莓": [
+    "noun"
+  ],
+  "莲": [
+    "noun"
+  ],
+  "菠": [
+    "noun"
+  ],
+  "萄": [],
+  "萝": [
+    "noun"
+  ],
+  "萨": [
+    "noun"
+  ],
+  "葡": [
+    "noun"
+  ],
+  "葱": [
+    "noun"
+  ],
+  "蕉": [
+    "noun"
+  ],
+  "虎": [
+    "noun"
+  ],
+  "蜓": [
+    "noun"
+  ],
+  "蜗": [],
+  "蜻": [
+    "noun"
+  ],
+  "蝙": [
+    "noun"
+  ],
+  "蝠": [
+    "noun"
+  ],
+  "蝴": [
+    "noun"
+  ],
+  "蝶": [
+    "noun"
+  ],
+  "衣": [
+    "noun",
+    "verb"
+  ],
+  "袋": [
+    "noun"
+  ],
+  "裙": [
+    "noun"
+  ],
+  "裤": [
+    "noun"
+  ],
+  "觉": [
+    "verb",
+    "noun"
+  ],
+  "語": [],
+  "认": [
+    "verb"
+  ],
+  "讨": [
+    "verb"
+  ],
+  "议": [
+    "verb",
+    "adjective"
+  ],
+  "论": [
+    "noun",
+    "verb"
+  ],
+  "识": [
+    "noun",
+    "verb"
+  ],
+  "译": [
+    "verb"
+  ],
+  "诞": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "该": [
+    "verb",
+    "adverb",
+    "adjective"
+  ],
+  "谢": [
+    "verb",
+    "adjective"
+  ],
+  "豆": [
+    "noun"
+  ],
+  "豹": [
+    "noun"
+  ],
+  "贺": [
+    "verb",
+    "noun"
+  ],
+  "赢": [
+    "noun",
+    "verb"
+  ],
+  "走": [
+    "verb",
+    "noun"
+  ],
+  "足": [
+    "noun",
+    "adjective",
+    "adverb"
+  ],
+  "辈": [
+    "noun"
+  ],
+  "辣": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "迪": [
+    "adjective",
+    "verb"
+  ],
+  "述": [
+    "verb"
+  ],
+  "迷": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "通": [
+    "adjective",
+    "adverb",
+    "verb",
+    "noun"
+  ],
+  "速": [
+    "noun",
+    "adjective"
+  ],
+  "邮": [
+    "adjective",
+    "noun"
+  ],
+  "邻": [
+    "adjective",
+    "noun",
+    "adverb"
+  ],
+  "钥": [
+    "noun"
+  ],
+  "铃": [
+    "noun"
+  ],
+  "镯": [
+    "noun"
+  ],
+  "门": [
+    "noun"
+  ],
+  "闲": [
+    "adjective",
+    "noun",
+    "verb"
+  ],
+  "雨": [
+    "noun",
+    "adjective"
+  ],
+  "雪": [
+    "noun"
+  ],
+  "鞋": [
+    "noun"
+  ],
+  "韩": [
+    "verb"
+  ],
+  "颜": [
+    "noun"
+  ],
+  "飞": [
+    "verb",
+    "adverb",
+    "adjective"
+  ],
+  "饺": [
+    "noun"
+  ],
+  "鲨": [
+    "noun"
+  ],
+  "鳄": [
+    "noun"
+  ],
+  "鸭": [
+    "noun"
+  ],
+  "鸵": [
+    "noun"
+  ],
+  "齿": [
+    "noun"
+  ],
+  "龟": [
+    "noun"
+  ],
+  "交易": [
+    "noun",
+    "verb"
+  ],
+  "交易所裸": [],
+  "另外": [
+    "adjective",
+    "adverb"
+  ],
+  "小偷": [
+    "noun"
+  ],
+  "小心": [
+    "adjective",
+    "adverb",
+    "noun"
+  ],
+  "我自己": [],
+  "护照": [
+    "noun"
+  ],
+  "提到": [
+    "verb"
+  ],
+  "提取": [
+    "verb"
+  ],
+  "查看": [
+    "verb"
+  ],
+  "沟通": [
+    "noun",
+    "verb"
+  ],
+  "真的吗": [],
+  "糟糕": [
+    "adjective"
+  ],
+  "系联": [],
+  "自己": [
+    "noun"
+  ],
+  "解析": [
+    "verb"
+  ],
+  "警察": [
+    "noun"
+  ],
+  "请于": [],
+  "请再说一遍": [],
+  "附件": [
+    "noun"
+  ],
+  "偷": [
+    "verb",
+    "adverb",
+    "adjective"
+  ],
+  "取": [
+    "verb"
+  ],
+  "另": [
+    "adjective",
+    "adverb"
+  ],
+  "察": [
+    "verb"
+  ],
+  "己": [
+    "noun"
+  ],
+  "护": [
+    "verb"
+  ],
+  "提": [
+    "verb",
+    "noun"
+  ],
+  "析": [
+    "verb"
+  ],
+  "沟": [
+    "noun"
+  ],
+  "糟": [
+    "noun",
+    "verb"
+  ],
+  "裸": [
+    "adjective",
+    "noun"
+  ],
+  "警": [
+    "noun",
+    "adjective",
+    "verb"
+  ],
+  "遍": [
+    "adverb",
+    "noun"
+  ]
+}

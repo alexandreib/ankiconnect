@@ -1,0 +1,747 @@
+{
+  "专": {
+    "english": "Specialize",
+    "pinyin": "Zhuān",
+    "pos": [
+      "adjective",
+      "noun",
+      "verb"
+    ],
+    "alts": [
+      "special",
+      "specialized",
+      "expert",
+      "particular",
+      "concentrated",
+      "concentrate",
+      "monopolize"
+    ]
+  },
+  "丢": {
+    "english": "leave",
+    "pinyin": "Diū",
+    "pos": [
+      "verb"
+    ],
+    "alts": [
+      "throw",
+      "lose",
+      "put aside"
+    ]
+  },
+  "主": {
+    "english": "host",
+    "pinyin": "Zhǔ",
+    "pos": [
+      "adjective",
+      "noun",
+      "verb"
+    ],
+    "alts": [
+      "main",
+      "primary",
+      "master",
+      "owner",
+      "lord",
+      "Allah",
+      "person concerned",
+      "party concerned",
+      "advocate",
+      "direct",
+      "indicate",
+      "manage",
+      "signify",
+      "hold a definite view about"
+    ]
+  },
+  "丽": {
+    "english": "Korea",
+    "pinyin": "Lì",
+    "pos": [
+      "noun",
+      "adjective"
+    ],
+    "alts": [
+      "beautiful",
+      "pretty"
+    ]
+  },
+  "久": {
+    "english": "Long",
+    "pinyin": "Jiǔ",
+    "pos": [
+      "adverb",
+      "noun"
+    ],
+    "alts": [
+      "long time"
+    ]
+  },
+  "习": {
+    "english": "habit",
+    "pinyin": "Xí",
+    "pos": [
+      "verb",
+      "noun"
+    ],
+    "alts": [
+      "study",
+      "practice",
+      "exercise",
+      "review",
+      "be used to",
+      "get accustomed to",
+      "practise",
+      "custom"
+    ]
+  },
+  "些": {
+    "english": "some",
+    "pinyin": "Xiē",
+    "pos": [
+      "adjective"
+    ],
+    "alts": [
+      "few",
+      "several"
+    ]
+  },
+  "交": {
+    "english": "pay",
+    "pinyin": "Jiāo",
+    "pos": [
+      "verb",
+      "noun",
+      "adjective",
+      "adverb"
+    ],
+    "alts": [
+      "cross",
+      "deliver",
+      "intersect",
+      "meet",
+      "turn over",
+      "make friends",
+      "have sexual intercourse",
+      "join",
+      "deal",
+      "friendship",
+      "mate",
+      "acquaintance",
+      "bargain",
+      "breed",
+      "fall",
+      "relationship",
+      "mutual",
+      "reciprocal",
+      "simultaneous",
+      "together"
+    ]
+  },
+  "亲": {
+    "english": "relative",
+    "pinyin": "Qīn",
+    "pos": [
+      "noun",
+      "verb",
+      "adjective",
+      "adverb"
+    ],
+    "alts": [
+      "parent",
+      "blood relation",
+      "match",
+      "parents-in-law",
+      "kiss",
+      "close",
+      "dear",
+      "intimate",
+      "oneself",
+      "in one's person"
+    ]
+  },
+  "区": {
+    "english": "district",
+    "pinyin": "Qū",
+    "pos": [
+      "noun",
+      "verb",
+      "adjective"
+    ],
+    "alts": [
+      "area",
+      "region",
+      "zone",
+      "division",
+      "township",
+      "subdivide",
+      "small"
+    ]
+  },
+  "器": {
+    "english": "device",
+    "pinyin": "Qì",
+    "pos": [
+      "noun"
+    ],
+    "alts": [
+      "implement",
+      "organ",
+      "ware",
+      "utensil",
+      "capacity",
+      "talent"
+    ]
+  },
+  "坏": {
+    "english": "bad",
+    "pinyin": "Huài",
+    "pos": [
+      "adjective",
+      "noun",
+      "verb",
+      "adverb"
+    ],
+    "alts": [
+      "evil",
+      "wicked",
+      "spoiled",
+      "ill",
+      "badness",
+      "evil idea",
+      "spoil",
+      "ruin",
+      "foul",
+      "addle",
+      "awfully"
+    ]
+  },
+  "容": {
+    "english": "Allow",
+    "pinyin": "Róng",
+    "pos": [
+      "verb",
+      "noun"
+    ],
+    "alts": [
+      "contain",
+      "hold",
+      "tolerate",
+      "permit",
+      "appearance",
+      "toleration",
+      "facial expression",
+      "look"
+    ]
+  },
+  "居": {
+    "english": "live",
+    "pinyin": "Jū",
+    "pos": [
+      "noun",
+      "verb"
+    ],
+    "alts": [
+      "residence",
+      "house",
+      "occupy",
+      "reside",
+      "dwell",
+      "assert",
+      "be",
+      "store up"
+    ]
+  },
+  "拾": {
+    "english": "pickup",
+    "pinyin": "Shí",
+    "pos": [
+      "adjective",
+      "verb"
+    ],
+    "alts": [
+      "pick up",
+      "collect"
+    ]
+  },
+  "描": {
+    "english": "trace",
+    "pinyin": "Miáo",
+    "pos": [
+      "verb"
+    ],
+    "alts": [
+      "draw",
+      "depict",
+      "copy",
+      "touch up"
+    ]
+  },
+  "握": {
+    "english": "grip",
+    "pinyin": "Wò",
+    "pos": [
+      "verb"
+    ],
+    "alts": [
+      "hold",
+      "grasp",
+      "shake hands"
+    ]
+  },
+  "摔": {
+    "english": "fall",
+    "pinyin": "Shuāi",
+    "pos": [
+      "verb"
+    ],
+    "alts": [
+      "throw",
+      "drop",
+      "break",
+      "toss",
+      "fall down",
+      "shake",
+      "hurl",
+      "fling",
+      "beat out",
+      "go headlong",
+      "knock out"
+    ]
+  },
+  "敬": {
+    "english": "respect",
+    "pinyin": "Jìng",
+    "pos": [
+      "verb"
+    ],
+    "alts": [
+      "offer",
+      "salute",
+      "venerate",
+      "give a salute"
+    ]
+  },
+  "易": {
+    "english": "easy",
+    "pinyin": "Yì",
+    "pos": [
+      "adjective",
+      "noun",
+      "verb"
+    ],
+    "alts": [
+      "simple",
+      "amiable",
+      "exchange",
+      "change"
+    ]
+  },
+  "楚": {
+    "english": "Chu",
+    "pinyin": "Chǔ",
+    "pos": [
+      "adjective",
+      "noun"
+    ],
+    "alts": [
+      "distinct",
+      "neat",
+      "orderly",
+      "pain",
+      "pang",
+      "suffering"
+    ]
+  },
+  "毯": {
+    "english": "blanket",
+    "pinyin": "Tǎn",
+    "pos": [
+      "noun"
+    ],
+    "alts": [
+      "carpet",
+      "rug"
+    ]
+  },
+  "清": {
+    "english": "clear",
+    "pinyin": "Qīng",
+    "pos": [
+      "adjective",
+      "noun",
+      "adverb"
+    ],
+    "alts": [
+      "clean",
+      "distinct",
+      "quiet",
+      "Qing Dynasty",
+      "thoroughly",
+      "completely"
+    ]
+  },
+  "码": {
+    "english": "code",
+    "pinyin": "Mǎ",
+    "pos": [
+      "noun"
+    ],
+    "alts": [
+      "yard",
+      "number",
+      "stack",
+      "weight"
+    ]
+  },
+  "算": {
+    "english": "Calculate",
+    "pinyin": "Suàn",
+    "pos": [
+      "verb",
+      "adverb"
+    ],
+    "alts": [
+      "count",
+      "reckon",
+      "consider",
+      "regard",
+      "suppose",
+      "think",
+      "carry weight",
+      "include",
+      "plan",
+      "finally",
+      "in the end",
+      "at long last"
+    ]
+  },
+  "翻": {
+    "english": "turn",
+    "pinyin": "Fān",
+    "pos": [
+      "noun",
+      "verb"
+    ],
+    "alts": [
+      "translation",
+      "turnover",
+      "turn over",
+      "translate",
+      "overturn",
+      "tip",
+      "page",
+      "tumble",
+      "capsize",
+      "cross",
+      "upend",
+      "coup",
+      "overset",
+      "purl"
+    ]
+  },
+  "译": {
+    "english": "translate",
+    "pinyin": "Yì",
+    "pos": [
+      "verb"
+    ],
+    "alts": [
+      "interpret",
+      "decode",
+      "decipher",
+      "render",
+      "unravel",
+      "figure out"
+    ]
+  },
+  "述": {
+    "english": "describe",
+    "pinyin": "Shù",
+    "pos": [
+      "verb"
+    ],
+    "alts": [
+      "state",
+      "narrate",
+      "relate",
+      "tell"
+    ]
+  },
+  "邻": {
+    "english": "adjacent",
+    "pinyin": "Lín",
+    "pos": [
+      "adjective",
+      "noun",
+      "adverb"
+    ],
+    "alts": [
+      "neighbor",
+      "near",
+      "neighbour",
+      "close to"
+    ]
+  },
+  "钥": {
+    "english": "key",
+    "pinyin": "Yào",
+    "pos": [
+      "noun"
+    ],
+    "alts": [
+      "lock opener",
+      "pass"
+    ]
+  },
+  "速": {
+    "english": "speed",
+    "pinyin": "Sù",
+    "pos": [
+      "noun",
+      "adjective"
+    ],
+    "alts": [
+      "velocity",
+      "fast",
+      "quick",
+      "rapid",
+      "speedy"
+    ]
+  },
+  "门": {
+    "english": "Door",
+    "pinyin": "Mén",
+    "pos": [
+      "noun"
+    ],
+    "alts": [
+      "gate",
+      "phylum",
+      "gateway",
+      "ostium",
+      "subkingdom",
+      "field of endeavor"
+    ]
+  },
+  "闲": {
+    "english": "idle",
+    "pinyin": "Xián",
+    "pos": [
+      "adjective",
+      "noun",
+      "verb"
+    ],
+    "alts": [
+      "not busy",
+      "leisure",
+      "interstice",
+      "inclosure",
+      "enclosure",
+      "stay idle",
+      "be unoccupied",
+      "separate"
+    ]
+  },
+  "偷": {
+    "english": "steal",
+    "pinyin": "Tōu",
+    "pos": [
+      "verb",
+      "adverb",
+      "adjective"
+    ],
+    "alts": [
+      "pilfer",
+      "filch",
+      "reave",
+      "cabbage",
+      "find",
+      "make off",
+      "reive",
+      "secretly",
+      "on the sly",
+      "stealthy",
+      "improper",
+      "inapposite",
+      "irregular",
+      "ill-fitted",
+      "ill-suited"
+    ]
+  },
+  "取": {
+    "english": "Pick",
+    "pinyin": "Qǔ",
+    "pos": [
+      "verb"
+    ],
+    "alts": [
+      "take",
+      "get",
+      "fetch",
+      "choose",
+      "adopt",
+      "seek",
+      "aim"
+    ]
+  },
+  "另": {
+    "english": "Other",
+    "pinyin": "Lìng",
+    "pos": [
+      "adjective",
+      "adverb"
+    ],
+    "alts": [
+      "another",
+      "separate",
+      "separately"
+    ]
+  },
+  "察": {
+    "english": "inspect",
+    "pinyin": "Chá",
+    "pos": [
+      "verb"
+    ],
+    "alts": [
+      "observe",
+      "examine",
+      "inquire",
+      "look into",
+      "scrutinize"
+    ]
+  },
+  "己": {
+    "english": "self",
+    "pinyin": "Jǐ",
+    "pos": [
+      "noun"
+    ],
+    "alts": [
+      "sixth heavenly stem"
+    ]
+  },
+  "护": {
+    "english": "protect",
+    "pinyin": "Hù",
+    "pos": [
+      "verb"
+    ],
+    "alts": []
+  },
+  "提": {
+    "english": "carry",
+    "pinyin": "Tí",
+    "pos": [
+      "verb",
+      "noun"
+    ],
+    "alts": [
+      "mention",
+      "extract",
+      "raise",
+      "lift",
+      "put forward",
+      "refer",
+      "promote",
+      "bring up",
+      "draw out",
+      "take out",
+      "shift to an earlier time",
+      "upwards character stroke"
+    ]
+  },
+  "析": {
+    "english": "analyze",
+    "pinyin": "Xī",
+    "pos": [
+      "verb"
+    ],
+    "alts": [
+      "separate",
+      "dissect",
+      "explain",
+      "divide"
+    ]
+  },
+  "沟": {
+    "english": "ditch",
+    "pinyin": "Gōu",
+    "pos": [
+      "noun"
+    ],
+    "alts": [
+      "trench",
+      "gutter",
+      "fossa",
+      "gouge",
+      "chimb",
+      "chime",
+      "kennel"
+    ]
+  },
+  "糟": {
+    "english": "Bad",
+    "pinyin": "Zāo",
+    "pos": [
+      "noun",
+      "verb"
+    ],
+    "alts": [
+      "dregs",
+      "waste",
+      "spoil"
+    ]
+  },
+  "裸": {
+    "english": "bare",
+    "pinyin": "Luǒ",
+    "pos": [
+      "adjective",
+      "noun"
+    ],
+    "alts": [
+      "naked",
+      "disposed",
+      "nakedness"
+    ]
+  },
+  "警": {
+    "english": "police",
+    "pinyin": "Jǐng",
+    "pos": [
+      "noun",
+      "adjective",
+      "verb"
+    ],
+    "alts": [
+      "police force",
+      "constabulary",
+      "alert",
+      "vigilant",
+      "ware",
+      "excubant",
+      "unslumbering",
+      "unwinking",
+      "heads-up",
+      "warn",
+      "caution",
+      "admonish",
+      "forestall",
+      "shout up"
+    ]
+  },
+  "遍": {
+    "english": "all over",
+    "pinyin": "Biàn",
+    "pos": [
+      "adverb",
+      "noun"
+    ],
+    "alts": [
+      "everywhere",
+      "time"
+    ]
+  }
+}

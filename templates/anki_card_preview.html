@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Anki Card Template Preview</title>
+<style>
+  body {
+    font-family: system-ui, sans-serif;
+    background: #e8e8e8;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 { text-align: center; color: #333; font-size: 20px; margin-bottom: 30px; }
+  h2 { color: #555; font-size: 15px; text-align: center; margin: 30px 0 10px; text-transform: uppercase; letter-spacing: 0.1em; }
+  .preview-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .card-frame {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    width: 380px;
+    overflow: hidden;
+  }
+  .card-frame-label {
+    background: #f0f0f0;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid #ddd;
+  }
+  .card-frame-body {
+    padding: 8px;
+  }
+  hr#answer { border: none; border-top: 1px dashed #ccc; margin: 12px 0; }
+
+  /* ══════════════════════════════════════════════════════════════
+     ANKI STYLING (same as in anki_card_templates.txt)
+     ══════════════════════════════════════════════════════════════ */
+
+  .card {
+    font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+    text-align: center;
+    padding: 24px 16px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .chinese {
+    font-size: 52px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+  .pinyin {
+    font-size: 22px;
+    color: #555;
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+  .english {
+    font-size: 26px;
+    color: #1a1a2e;
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 1.4;
+  }
+  .comment {
+    font-size: 15px;
+    color: #666;
+    background: #f5f5f5;
+    border-left: 3px solid #ccc;
+    padding: 6px 12px;
+    margin: 12px auto;
+    max-width: 360px;
+    text-align: left;
+    border-radius: 4px;
+  }
+  .tags-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 16px;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    letter-spacing: 0.03em;
+    text-transform: lowercase;
+  }
+
+  /* POS */
+  .tag-verb            { background: #dbeafe; color: #1e40af; }
+  .tag-verb-auxiliary   { background: #dbeafe; color: #1e40af; border: 1px dashed #60a5fa; }
+  .tag-noun            { background: #fef3c7; color: #92400e; }
+  .tag-adjective       { background: #d1fae5; color: #065f46; }
+  .tag-adverb          { background: #ede9fe; color: #5b21b6; }
+  .tag-conjunction     { background: #fce7f3; color: #9d174d; }
+  .tag-number          { background: #e0e7ff; color: #3730a3; }
+  .tag-measureword     { background: #f3e8ff; color: #6b21a8; }
+
+  /* Noun subcategories */
+  .tag-noun-animal     { background: #fef3c7; color: #78350f; border: 1px dashed #d97706; }
+  .tag-noun-clothes    { background: #fef3c7; color: #78350f; border: 1px dashed #d97706; }
+  .tag-noun-color      { background: #fef3c7; color: #78350f; border: 1px dashed #d97706; }
+  .tag-noun-festival   { background: #fef3c7; color: #78350f; border: 1px dashed #d97706; }
+  .tag-noun-food       { background: #fef3c7; color: #78350f; border: 1px dashed #d97706; }
+  .tag-noun-object     { background: #fef3c7; color: #78350f; border: 1px dashed #d97706; }
+  .tag-noun-sport      { background: #fef3c7; color: #78350f; border: 1px dashed #d97706; }
+  .tag-noun-world      { background: #fef3c7; color: #78350f; border: 1px dashed #d97706; }
+
+  /* Format */
+  .tag-single          { background: #f0f0f0; color: #444; }
+  .tag-sentence        { background: #f0f0f0; color: #444; }
+  .tag-questions       { background: #fff7ed; color: #c2410c; }
+  .tag-time-point      { background: #ecfdf5; color: #047857; }
+
+  /* Meta */
+  .tag-lesson          { background: #e5e7eb; color: #374151; }
+  .tag-newwords        { background: #e5e7eb; color: #374151; }
+  .tag-leech           { background: #fee2e2; color: #991b1b; }
+</style>
+</head>
+<body>
+
+<h1>Anki Card Template Preview</h1>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>Note Type 1 &mdash; English &rarr; Chinese</h2>
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="preview-row">
+
+  <!-- FRONT -->
+  <div class="card-frame">
+    <div class="card-frame-label">Front</div>
+    <div class="card-frame-body">
+      <div class="card front">
+        <div class="english">Give birth, raw, life, student</div>
+        <div class="tags-bar">
+          <span class="tag tag-adjective">adjective</span>
+          <span class="tag tag-verb">verb</span>
+          <span class="tag tag-single">single</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK -->
+  <div class="card-frame">
+    <div class="card-frame-label">Back</div>
+    <div class="card-frame-body">
+      <div class="card front">
+        <div class="english">Give birth, raw, life, student</div>
+        <div class="tags-bar">
+          <span class="tag tag-adjective">adjective</span>
+          <span class="tag tag-verb">verb</span>
+          <span class="tag tag-single">single</span>
+        </div>
+      </div>
+      <hr id="answer">
+      <div class="card back">
+        <div class="chinese">生</div>
+        <div class="pinyin">Shēng</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>Note Type 2 &mdash; Chinese &rarr; Details</h2>
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="preview-row">
+
+  <!-- FRONT -->
+  <div class="card-frame">
+    <div class="card-frame-label">Front</div>
+    <div class="card-frame-body">
+      <div class="card front">
+        <div class="chinese">生</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK -->
+  <div class="card-frame">
+    <div class="card-frame-label">Back</div>
+    <div class="card-frame-body">
+      <div class="card back">
+        <div class="chinese">生</div>
+        <div class="pinyin">Shēng</div>
+        <div class="tags-bar">
+          <span class="tag tag-adjective">adjective</span>
+          <span class="tag tag-verb">verb</span>
+          <span class="tag tag-single">single</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>More examples</h2>
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="preview-row">
+
+  <!-- Noun subcategory example -->
+  <div class="card-frame">
+    <div class="card-frame-label">Back &mdash; noun subcategory</div>
+    <div class="card-frame-body">
+      <div class="card back">
+        <div class="chinese">猫</div>
+        <div class="pinyin">Māo</div>
+        <div class="comment">Also used as internet slang for cute person</div>
+        <div class="tags-bar">
+          <span class="tag tag-noun">noun</span>
+          <span class="tag tag-noun-animal">noun &rsaquo; animal</span>
+          <span class="tag tag-single">single</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sentence example -->
+  <div class="card-frame">
+    <div class="card-frame-label">Front &mdash; sentence</div>
+    <div class="card-frame-body">
+      <div class="card front">
+        <div class="english">How much is this?</div>
+        <div class="tags-bar">
+          <span class="tag tag-sentence">sentence</span>
+          <span class="tag tag-questions">questions</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="preview-row">
+
+  <!-- Adverb + conjunction -->
+  <div class="card-frame">
+    <div class="card-frame-label">Back &mdash; adverb</div>
+    <div class="card-frame-body">
+      <div class="card back">
+        <div class="chinese">很</div>
+        <div class="pinyin">Hěn</div>
+        <div class="tags-bar">
+          <span class="tag tag-adverb">adverb</span>
+          <span class="tag tag-single">single</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Verb auxiliary + leech -->
+  <div class="card-frame">
+    <div class="card-frame-label">Back &mdash; auxiliary verb + leech</div>
+    <div class="card-frame-body">
+      <div class="card back">
+        <div class="chinese">会</div>
+        <div class="pinyin">Huì</div>
+        <div class="comment">Can / will / to be able to</div>
+        <div class="tags-bar">
+          <span class="tag tag-verb">verb</span>
+          <span class="tag tag-verb-auxiliary">verb &rsaquo; auxiliary</span>
+          <span class="tag tag-single">single</span>
+          <span class="tag tag-leech">leech</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="preview-row">
+
+  <!-- Measure word -->
+  <div class="card-frame">
+    <div class="card-frame-label">Back &mdash; measure word</div>
+    <div class="card-frame-body">
+      <div class="card back">
+        <div class="chinese">个</div>
+        <div class="pinyin">Gè</div>
+        <div class="comment">General measure word, most common</div>
+        <div class="tags-bar">
+          <span class="tag tag-measureword">measureword</span>
+          <span class="tag tag-single">single</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Time + number + food -->
+  <div class="card-frame">
+    <div class="card-frame-label">Back &mdash; various tags</div>
+    <div class="card-frame-body">
+      <div class="card back">
+        <div class="chinese">苹果</div>
+        <div class="pinyin">Píngguǒ</div>
+        <div class="tags-bar">
+          <span class="tag tag-noun">noun</span>
+          <span class="tag tag-noun-food">noun &rsaquo; food</span>
+          <span class="tag tag-newwords">newwords</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>All tag styles</h2>
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="preview-row">
+  <div class="card-frame" style="width: 600px;">
+    <div class="card-frame-label">Complete tag palette</div>
+    <div class="card-frame-body" style="padding: 20px;">
+      <div class="tags-bar">
+        <span class="tag tag-verb">verb</span>
+        <span class="tag tag-verb-auxiliary">verb &rsaquo; auxiliary</span>
+        <span class="tag tag-noun">noun</span>
+        <span class="tag tag-noun-animal">noun &rsaquo; animal</span>
+        <span class="tag tag-noun-clothes">noun &rsaquo; clothes</span>
+        <span class="tag tag-noun-color">noun &rsaquo; color</span>
+        <span class="tag tag-noun-festival">noun &rsaquo; festival</span>
+        <span class="tag tag-noun-food">noun &rsaquo; food</span>
+        <span class="tag tag-noun-object">noun &rsaquo; object</span>
+        <span class="tag tag-noun-sport">noun &rsaquo; sport</span>
+        <span class="tag tag-noun-world">noun &rsaquo; world</span>
+        <span class="tag tag-adjective">adjective</span>
+        <span class="tag tag-adverb">adverb</span>
+        <span class="tag tag-conjunction">conjunction</span>
+        <span class="tag tag-number">number</span>
+        <span class="tag tag-measureword">measureword</span>
+        <span class="tag tag-single">single</span>
+        <span class="tag tag-sentence">sentence</span>
+        <span class="tag tag-questions">questions</span>
+        <span class="tag tag-time-point">time &rsaquo; point</span>
+        <span class="tag tag-lesson">lesson</span>
+        <span class="tag tag-newwords">newwords</span>
+        <span class="tag tag-leech">leech</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
