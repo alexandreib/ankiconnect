@@ -39,10 +39,16 @@
   .card-frame-body {
     padding: 8px;
   }
-  hr#answer { border: none; border-top: 1px dashed #ccc; margin: 12px 0; }
+  .font-label {
+    text-align: center;
+    font-size: 11px;
+    color: #999;
+    margin-top: 4px;
+    font-style: italic;
+  }
 
   /* ══════════════════════════════════════════════════════════════
-     ANKI STYLING (same as in anki_card_templates.txt)
+     ANKI STYLING (same as shared styling in anki_card_templates.txt)
      ══════════════════════════════════════════════════════════════ */
 
   .card {
@@ -51,29 +57,55 @@
     padding: 24px 16px;
     max-width: 480px;
     margin: 0 auto;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
   }
   .chinese {
-    font-size: 52px;
+    font-size: 42px;
     font-weight: 700;
     color: #1a1a2e;
     margin-bottom: 8px;
     letter-spacing: 0.05em;
   }
   .pinyin {
-    font-size: 22px;
+    font-size: 30px;
     color: #555;
     margin-bottom: 12px;
     font-style: italic;
   }
   .english {
-    font-size: 26px;
+    font-size: 30px;
     color: #1a1a2e;
     font-weight: 600;
     margin-bottom: 16px;
     line-height: 1.4;
   }
+  #answer, .answer-divider {
+    height: 4px;
+    background: #e0e0e0;
+    width: 60%;
+    margin: 32px auto;
+    border-radius: 2px;
+    border: none;
+  }
+  .type-bar {
+    display: flex;
+    font-size: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 16px;
+  }
+  .typeans-preview {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    margin: 12px 0;
+  }
+  .typeans-correct { color: #16a34a; }
+  .typeans-wrong   { color: #dc2626; text-decoration: line-through; }
   .comment {
-    font-size: 15px;
+    font-size: 20px;
     color: #666;
     background: #f5f5f5;
     border-left: 3px solid #ccc;
@@ -92,7 +124,7 @@
   }
   .tag {
     display: inline-block;
-    font-size: 12px;
+    font-size: 18px;
     font-weight: 600;
     padding: 3px 10px;
     border-radius: 12px;
@@ -122,6 +154,7 @@
 
   /* Format */
   .tag-single          { background: #f0f0f0; color: #444; }
+  .tag-double          { background: #f0f0f0; color: #444; }
   .tag-sentence        { background: #f0f0f0; color: #444; }
   .tag-questions       { background: #fff7ed; color: #c2410c; }
   .tag-time-point      { background: #ecfdf5; color: #047857; }
@@ -137,7 +170,7 @@
 <h1>Anki Card Template Preview</h1>
 
 <!-- ═══════════════════════════════════════════════════════════════════ -->
-<h2>Note Type 1 &mdash; English &rarr; Chinese</h2>
+<h2>Card 1 &mdash; Chinese &rarr; Details</h2>
 <!-- ═══════════════════════════════════════════════════════════════════ -->
 
 <div class="preview-row">
@@ -147,13 +180,9 @@
     <div class="card-frame-label">Front</div>
     <div class="card-frame-body">
       <div class="card front">
-        <div class="english">Give birth, raw, life, student</div>
-        <div class="tags-bar">
-          <span class="tag tag-adjective">adjective</span>
-          <span class="tag tag-verb">verb</span>
-          <span class="tag tag-single">single</span>
-        </div>
+        <div class="chinese font-demo" data-font="0">生</div>
       </div>
+      <div class="font-label"></div>
     </div>
   </div>
 
@@ -162,17 +191,16 @@
     <div class="card-frame-label">Back</div>
     <div class="card-frame-body">
       <div class="card front">
+        <div class="chinese font-demo" data-font="0">生</div>
+      </div>
+      <div class="card back">
         <div class="english">Give birth, raw, life, student</div>
+        <div class="pinyin">Shēng</div>
         <div class="tags-bar">
           <span class="tag tag-adjective">adjective</span>
           <span class="tag tag-verb">verb</span>
           <span class="tag tag-single">single</span>
         </div>
-      </div>
-      <hr id="answer">
-      <div class="card back">
-        <div class="chinese">生</div>
-        <div class="pinyin">Shēng</div>
       </div>
     </div>
   </div>
@@ -180,33 +208,128 @@
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════════ -->
-<h2>Note Type 2 &mdash; Chinese &rarr; Details</h2>
+<h2>Card 2 &mdash; English &rarr; Chinese (with typing)</h2>
 <!-- ═══════════════════════════════════════════════════════════════════ -->
 
 <div class="preview-row">
 
   <!-- FRONT -->
   <div class="card-frame">
-    <div class="card-frame-label">Front</div>
+    <div class="card-frame-label">Front (type the answer)</div>
     <div class="card-frame-body">
       <div class="card front">
-        <div class="chinese">生</div>
+        <div class="english">Apple</div>
+        <div class="tags-bar">
+          <span class="tag tag-noun">noun</span>
+          <span class="tag tag-noun-food">noun &rsaquo; food</span>
+          <span class="tag tag-double">double</span>
+        </div>
+        <br>
+        <div class="type-bar">
+          <input type="text" placeholder="type 中文 here" style="font-size: 18px; padding: 6px 12px; text-align: center; border: 2px solid #ccc; border-radius: 8px; width: 200px;" disabled>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- BACK -->
   <div class="card-frame">
-    <div class="card-frame-label">Back</div>
+    <div class="card-frame-label">Back (answer comparison)</div>
     <div class="card-frame-body">
-      <div class="card back">
-        <div class="chinese">生</div>
-        <div class="pinyin">Shēng</div>
+      <div class="card front">
+        <div class="english">Apple</div>
         <div class="tags-bar">
-          <span class="tag tag-adjective">adjective</span>
-          <span class="tag tag-verb">verb</span>
+          <span class="tag tag-noun">noun</span>
+          <span class="tag tag-noun-food">noun &rsaquo; food</span>
+          <span class="tag tag-double">double</span>
+        </div>
+      </div>
+      <div class="typeans-preview">
+        <span class="typeans-correct">苹果</span>
+      </div>
+      <div class="answer-divider"></div>
+      <div class="card back">
+        <div class="chinese font-demo" data-font="1">苹果</div>
+        <div class="pinyin">Píngguǒ</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>Card 2 &mdash; Wrong answer example</h2>
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="preview-row">
+
+  <div class="card-frame">
+    <div class="card-frame-label">Back (wrong answer)</div>
+    <div class="card-frame-body">
+      <div class="card front">
+        <div class="english">Cat</div>
+        <div class="tags-bar">
+          <span class="tag tag-noun">noun</span>
+          <span class="tag tag-noun-animal">noun &rsaquo; animal</span>
           <span class="tag tag-single">single</span>
         </div>
+      </div>
+      <div class="typeans-preview">
+        <span class="typeans-wrong">描</span> &rarr; <span class="typeans-correct">猫</span>
+      </div>
+      <div class="answer-divider"></div>
+      <div class="card back">
+        <div class="chinese font-demo" data-font="2">猫</div>
+        <div class="pinyin">Māo</div>
+        <div class="comment">Also used as internet slang for cute person</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+<h2>Random font showcase</h2>
+<!-- ═══════════════════════════════════════════════════════════════════ -->
+
+<div class="preview-row">
+
+  <div class="card-frame">
+    <div class="card-frame-label">Noto Sans SC &mdash; clean sans-serif</div>
+    <div class="card-frame-body">
+      <div class="card">
+        <div class="chinese" style='font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;'>你好世界</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-frame">
+    <div class="card-frame-label">Noto Serif SC &mdash; traditional serif</div>
+    <div class="card-frame-body">
+      <div class="card">
+        <div class="chinese" style='font-family: "Noto Serif SC", "SimSun", "Songti SC", serif;'>你好世界</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="preview-row">
+
+  <div class="card-frame">
+    <div class="card-frame-label">LXGW WenKai &mdash; artistic/elegant</div>
+    <div class="card-frame-body">
+      <div class="card">
+        <div class="chinese" style='font-family: "LXGW WenKai", "STXingkai", "Xingkai SC", cursive;'>你好世界</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-frame">
+    <div class="card-frame-label">Ma Shan Zheng &mdash; handwritten brush</div>
+    <div class="card-frame-body">
+      <div class="card">
+        <div class="chinese" style='font-family: "Ma Shan Zheng", "STKaiti", "Kaiti SC", cursive;'>你好世界</div>
       </div>
     </div>
   </div>
@@ -219,67 +342,17 @@
 
 <div class="preview-row">
 
-  <!-- Noun subcategory example -->
   <div class="card-frame">
-    <div class="card-frame-label">Back &mdash; noun subcategory</div>
-    <div class="card-frame-body">
-      <div class="card back">
-        <div class="chinese">猫</div>
-        <div class="pinyin">Māo</div>
-        <div class="comment">Also used as internet slang for cute person</div>
-        <div class="tags-bar">
-          <span class="tag tag-noun">noun</span>
-          <span class="tag tag-noun-animal">noun &rsaquo; animal</span>
-          <span class="tag tag-single">single</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Sentence example -->
-  <div class="card-frame">
-    <div class="card-frame-label">Front &mdash; sentence</div>
+    <div class="card-frame-label">Back &mdash; adverb + leech</div>
     <div class="card-frame-body">
       <div class="card front">
-        <div class="english">How much is this?</div>
-        <div class="tags-bar">
-          <span class="tag tag-sentence">sentence</span>
-          <span class="tag tag-questions">questions</span>
-        </div>
+        <div class="chinese font-demo" data-font="3">很</div>
       </div>
-    </div>
-  </div>
-
-</div>
-
-<div class="preview-row">
-
-  <!-- Adverb + conjunction -->
-  <div class="card-frame">
-    <div class="card-frame-label">Back &mdash; adverb</div>
-    <div class="card-frame-body">
       <div class="card back">
-        <div class="chinese">很</div>
+        <div class="english">Very, quite</div>
         <div class="pinyin">Hěn</div>
         <div class="tags-bar">
           <span class="tag tag-adverb">adverb</span>
-          <span class="tag tag-single">single</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Verb auxiliary + leech -->
-  <div class="card-frame">
-    <div class="card-frame-label">Back &mdash; auxiliary verb + leech</div>
-    <div class="card-frame-body">
-      <div class="card back">
-        <div class="chinese">会</div>
-        <div class="pinyin">Huì</div>
-        <div class="comment">Can / will / to be able to</div>
-        <div class="tags-bar">
-          <span class="tag tag-verb">verb</span>
-          <span class="tag tag-verb-auxiliary">verb &rsaquo; auxiliary</span>
           <span class="tag tag-single">single</span>
           <span class="tag tag-leech">leech</span>
         </div>
@@ -287,37 +360,20 @@
     </div>
   </div>
 
-</div>
-
-<div class="preview-row">
-
-  <!-- Measure word -->
   <div class="card-frame">
-    <div class="card-frame-label">Back &mdash; measure word</div>
+    <div class="card-frame-label">Back &mdash; lesson card</div>
     <div class="card-frame-body">
-      <div class="card back">
-        <div class="chinese">个</div>
-        <div class="pinyin">Gè</div>
-        <div class="comment">General measure word, most common</div>
-        <div class="tags-bar">
-          <span class="tag tag-measureword">measureword</span>
-          <span class="tag tag-single">single</span>
-        </div>
+      <div class="card front">
+        <div class="chinese font-demo" data-font="1">多少钱</div>
       </div>
-    </div>
-  </div>
-
-  <!-- Time + number + food -->
-  <div class="card-frame">
-    <div class="card-frame-label">Back &mdash; various tags</div>
-    <div class="card-frame-body">
       <div class="card back">
-        <div class="chinese">苹果</div>
-        <div class="pinyin">Píngguǒ</div>
+        <div class="english">How much is it?</div>
+        <div class="pinyin">Duōshǎo qián</div>
+        <div class="comment">Use for prices and quantities</div>
         <div class="tags-bar">
-          <span class="tag tag-noun">noun</span>
-          <span class="tag tag-noun-food">noun &rsaquo; food</span>
-          <span class="tag tag-newwords">newwords</span>
+          <span class="tag tag-sentence">sentence</span>
+          <span class="tag tag-questions">questions</span>
+          <span class="tag tag-lesson">lesson</span>
         </div>
       </div>
     </div>
@@ -351,6 +407,7 @@
         <span class="tag tag-number">number</span>
         <span class="tag tag-measureword">measureword</span>
         <span class="tag tag-single">single</span>
+        <span class="tag tag-double">double</span>
         <span class="tag tag-sentence">sentence</span>
         <span class="tag tag-questions">questions</span>
         <span class="tag tag-time-point">time &rsaquo; point</span>
@@ -361,6 +418,29 @@
     </div>
   </div>
 </div>
+
+<script>
+(function() {
+  var fonts = [
+    ['"Noto Sans SC", "Microsoft YaHei", sans-serif', 'Noto Sans SC'],
+    ['"Noto Serif SC", "SimSun", "Songti SC", serif', 'Noto Serif SC'],
+    ['"LXGW WenKai", "STXingkai", "Xingkai SC", cursive', 'LXGW WenKai'],
+    ['"Ma Shan Zheng", "STKaiti", "Kaiti SC", cursive', 'Ma Shan Zheng']
+  ];
+  document.querySelectorAll('.font-demo').forEach(function(el) {
+    var idx = parseInt(el.getAttribute('data-font')) % fonts.length;
+    // Randomly assign if not specified
+    if (isNaN(idx)) idx = Math.floor(Math.random() * fonts.length);
+    el.style.fontFamily = fonts[idx][0];
+    // Show which font was picked in a small label
+    var label = el.closest('.card-frame-body');
+    if (label) {
+      var fl = label.querySelector('.font-label');
+      if (fl) fl.textContent = 'Font: ' + fonts[idx][1];
+    }
+  });
+})();
+</script>
 
 </body>
 </html>

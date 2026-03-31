@@ -5,8 +5,64 @@
 
 
 ════════════════════════════════════════════════════════════════════════════════
-  NOTE TYPE 1:  English → Chinese
-  (Front: English + Tags  →  Back: Chinese + Pinyin + Comment)
+  CARD 1:  Chinese → Details
+  (Front: Chinese  →  Back: English + Pinyin + Comment + Tags)
+════════════════════════════════════════════════════════════════════════════════
+
+── FRONT TEMPLATE ──────────────────────────────────────────────────────────────
+
+<div class="card front">
+  <div class="chinese">{{中文}}</div>
+</div>
+
+<script>
+(function() {
+  var fonts = [
+    '"Noto Sans SC", "Microsoft YaHei", sans-serif',
+    '"Noto Serif SC", "SimSun", "Songti SC", serif',
+    '"LXGW WenKai", "STXingkai", "Xingkai SC", cursive',
+    '"Ma Shan Zheng", "STKaiti", "Kaiti SC", cursive'
+  ];
+  var pick = fonts[Math.floor(Math.random() * fonts.length)];
+  document.querySelectorAll('.chinese').forEach(function(el) {
+    el.style.fontFamily = pick;
+  });
+})();
+</script>
+
+── BACK TEMPLATE ───────────────────────────────────────────────────────────────
+
+{{FrontSide}}
+
+<div class="card back">
+  <div class="english">{{English}}</div>
+  <div class="pinyin">{{Pinyin}}</div>
+  {{#Comment}} <div class="comment">{{Comment}}</div>{{/Comment}}
+  <div class="tags-bar">{{Tags}}</div>
+</div>
+
+<script>
+(function() {
+  document.querySelectorAll('.tags-bar').forEach(function(bar) {
+    var raw = bar.textContent.trim();
+    if (!raw) return;
+    var tags = raw.split(/\s+/);
+    bar.innerHTML = '';
+    tags.forEach(function(t) {
+      if (!t) return;
+      var span = document.createElement('span');
+      span.className = 'tag tag-' + t.toLowerCase().replace(/::/g, '-');
+      span.textContent = t.replace(/::/g, ' \u203A ');
+      bar.appendChild(span);
+    });
+  });
+})();
+</script>
+
+
+════════════════════════════════════════════════════════════════════════════════
+  CARD 2:  English → Chinese (with typing)
+  (Front: English + Tags + type input  →  Back: Chinese + Pinyin + Comment)
 ════════════════════════════════════════════════════════════════════════════════
 
 ── FRONT TEMPLATE ──────────────────────────────────────────────────────────────
@@ -14,6 +70,8 @@
 <div class="card front">
   <div class="english">{{English}}</div>
   <div class="tags-bar">{{Tags}}</div>
+	<br>
+  <div class="type-bar">{{type:中文}}</div>
 </div>
 
 <script>
@@ -37,56 +95,39 @@
 ── BACK TEMPLATE ───────────────────────────────────────────────────────────────
 
 {{FrontSide}}
-<hr id="answer">
+
+<div id="answer"></div>
 
 <div class="card back">
   <div class="chinese">{{中文}}</div>
   <div class="pinyin">{{Pinyin}}</div>
   {{#Comment}}<div class="comment">{{Comment}}</div>{{/Comment}}
-</div>
-
-
-════════════════════════════════════════════════════════════════════════════════
-  NOTE TYPE 2:  Chinese → Details
-  (Front: Chinese  →  Back: Chinese + Pinyin + Comment + Tags)
-════════════════════════════════════════════════════════════════════════════════
-
-── FRONT TEMPLATE ──────────────────────────────────────────────────────────────
-
-<div class="card front">
-  <div class="chinese">{{中文}}</div>
-</div>
-
-── BACK TEMPLATE ───────────────────────────────────────────────────────────────
-
-<div class="card back">
-  <div class="chinese">{{中文}}</div>
-  <div class="pinyin">{{Pinyin}}</div>
-  {{#Comment}}<div class="comment">{{Comment}}</div>{{/Comment}}
-  <div class="tags-bar">{{Tags}}</div>
 </div>
 
 <script>
 (function() {
-  document.querySelectorAll('.tags-bar').forEach(function(bar) {
-    var raw = bar.textContent.trim();
-    if (!raw) return;
-    var tags = raw.split(/\s+/);
-    bar.innerHTML = '';
-    tags.forEach(function(t) {
-      if (!t) return;
-      var span = document.createElement('span');
-      span.className = 'tag tag-' + t.toLowerCase().replace(/::/g, '-');
-      span.textContent = t.replace(/::/g, ' \u203A ');
-      bar.appendChild(span);
-    });
+  var fonts = [
+    '"Noto Sans SC", "Microsoft YaHei", sans-serif',
+    '"Noto Serif SC", "SimSun", "Songti SC", serif',
+    '"LXGW WenKai", "STXingkai", "Xingkai SC", cursive',
+    '"Ma Shan Zheng", "STKaiti", "Kaiti SC", cursive'
+  ];
+  var pick = fonts[Math.floor(Math.random() * fonts.length)];
+  document.querySelectorAll('.chinese').forEach(function(el) {
+    el.style.fontFamily = pick;
   });
+
+  /* Make the type-answer comparison bigger */
+  var typeans = document.getElementById('typeans');
+  if (typeans) {
+    typeans.style.fontSize = '36px';
+  }
 })();
 </script>
 
 
 ════════════════════════════════════════════════════════════════════════════════
-  STYLING  (shared — paste in the "Styling" box of BOTH note types)
+  STYLING  (shared — paste in the "Styling" box of BOTH cards)
 ════════════════════════════════════════════════════════════════════════════════
 
 /* ── Base ─────────────────────────────────────────── */
@@ -96,11 +137,13 @@
   padding: 24px 16px;
   max-width: 480px;
   margin: 0 auto;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
 }
 
 /* ── Chinese ──────────────────────────────────────── */
 .chinese {
-  font-size: 52px;
+  font-size: 42px;
   font-weight: 700;
   color: #1a1a2e;
   margin-bottom: 8px;
@@ -109,7 +152,7 @@
 
 /* ── Pinyin ───────────────────────────────────────── */
 .pinyin {
-  font-size: 22px;
+  font-size: 30px;
   color: #555;
   margin-bottom: 12px;
   font-style: italic;
@@ -117,16 +160,40 @@
 
 /* ── English ──────────────────────────────────────── */
 .english {
-  font-size: 26px;
+  font-size: 30px;
   color: #1a1a2e;
   font-weight: 600;
   margin-bottom: 16px;
   line-height: 1.4;
 }
 
+/* ── Answer divider ──────────────────────────────── */
+#answer {
+  height: 4px;
+  background: #e0e0e0;
+  width: 60%;
+  margin: 32px auto;
+  border-radius: 2px;
+}
+
+/* ── Type input & answer comparison ──────────────── */
+.type-bar {
+  display: flex;
+  font-size: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+#typeans {
+  font-size: 36px;
+  font-weight: 600;
+}
+
 /* ── Comment ──────────────────────────────────────── */
 .comment {
-  font-size: 15px;
+  font-size: 20px;
   color: #666;
   background: #f5f5f5;
   border-left: 3px solid #ccc;
@@ -149,7 +216,7 @@
 /* ── Individual tag pill ─────────────────────────── */
 .tag {
   display: inline-block;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 600;
   padding: 3px 10px;
   border-radius: 12px;
@@ -179,6 +246,7 @@
 
 /* ── Format / type ───────────────────────────────── */
 .tag-single          { background: #f0f0f0; color: #444; }
+.tag-double          { background: #f0f0f0; color: #444; }
 .tag-sentence        { background: #f0f0f0; color: #444; }
 .tag-questions       { background: #fff7ed; color: #c2410c; }
 .tag-time-point      { background: #ecfdf5; color: #047857; }
@@ -197,6 +265,21 @@
 
 
 ════════════════════════════════════════════════════════════════════════════════
+  RANDOM FONT INFO
+════════════════════════════════════════════════════════════════════════════════
+
+  Each time a card is shown, the Chinese characters randomly use one of:
+
+  Font              Style             Fallback
+  ────────────────  ────────────────  ──────────────────────────
+  Noto Sans SC      Clean sans-serif  Microsoft YaHei
+  Noto Serif SC     Traditional serif SimSun, Songti SC
+  ZCOOL XiaoWei     Artistic/elegant  STXingkai, Xingkai SC
+  Ma Shan Zheng     Handwritten brush STKaiti, Kaiti SC
+
+  Install via Google Fonts or use system fallbacks (already on most devices).
+
+════════════════════════════════════════════════════════════════════════════════
   TAG COLOR REFERENCE
 ════════════════════════════════════════════════════════════════════════════════
 
@@ -213,6 +296,7 @@
   number           indigo pill   [number]
   measureword      violet pill   [measureword]
   single           gray pill     [single]
+  double           gray pill     [double]
   sentence         gray pill     [sentence]
   questions        orange pill   [questions]
   time::point      teal pill     [time › point]
@@ -229,5 +313,5 @@
   3. Paste the FRONT TEMPLATE into "Front Template"
   4. Paste the BACK TEMPLATE into "Back Template"
   5. Paste the STYLING into "Styling"
-  6. Repeat for the second note type
+  6. Repeat for the second card
   7. Click "Save" and preview a card
