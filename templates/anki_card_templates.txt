@@ -16,18 +16,18 @@
 </div>
 
 <script>
-(function() {
+requestAnimationFrame(function() {
   var fonts = [
     '"Noto Sans SC", "Microsoft YaHei", sans-serif',
     '"Noto Serif SC", "SimSun", "Songti SC", serif',
-    '"LXGW WenKai", "STXingkai", "Xingkai SC", cursive',
+    '"ZCOOL KuaiLe", "Microsoft YaHei", sans-serif',
     '"Ma Shan Zheng", "STKaiti", "Kaiti SC", cursive'
   ];
   var pick = fonts[Math.floor(Math.random() * fonts.length)];
   document.querySelectorAll('.chinese').forEach(function(el) {
     el.style.fontFamily = pick;
   });
-})();
+});
 </script>
 
 ── BACK TEMPLATE ───────────────────────────────────────────────────────────────
@@ -105,11 +105,11 @@
 </div>
 
 <script>
-(function() {
+requestAnimationFrame(function() {
   var fonts = [
     '"Noto Sans SC", "Microsoft YaHei", sans-serif',
     '"Noto Serif SC", "SimSun", "Songti SC", serif',
-    '"LXGW WenKai", "STXingkai", "Xingkai SC", cursive',
+    '"ZCOOL KuaiLe", "Microsoft YaHei", sans-serif',
     '"Ma Shan Zheng", "STKaiti", "Kaiti SC", cursive'
   ];
   var pick = fonts[Math.floor(Math.random() * fonts.length)];
@@ -122,7 +122,7 @@
   if (typeans) {
     typeans.style.fontSize = '36px';
   }
-})();
+});
 </script>
 
 
@@ -274,7 +274,7 @@
   ────────────────  ────────────────  ──────────────────────────
   Noto Sans SC      Clean sans-serif  Microsoft YaHei
   Noto Serif SC     Traditional serif SimSun, Songti SC
-  ZCOOL XiaoWei     Artistic/elegant  STXingkai, Xingkai SC
+  ZCOOL KuaiLe      Rounded/playful   Microsoft YaHei
   Ma Shan Zheng     Handwritten brush STKaiti, Kaiti SC
 
   Install via Google Fonts or use system fallbacks (already on most devices).
