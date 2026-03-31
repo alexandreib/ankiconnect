@@ -96,7 +96,7 @@ def google_translate(word):
 
 # ── Cached lookups ───────────────────────────────────────────────────────────
 
-def build_definition(english, alternatives, max_total=4):
+def build_definition(english, alternatives, max_total=5):
     """Combine primary translation with alternatives for a distinctive definition."""
     if not alternatives:
         return english
