@@ -13,7 +13,7 @@ from shared import (
     load_pos_cache, save_pos_cache, google_translate, build_definition,
     load_char_info_cache, save_char_info_cache, lookup_full,
     load_deck_records, strip_html,
-    extract_pptx_text, extract_doc_lines,
+    extract_pptx_text, extract_doc_lines, remove_pinyin_from_definition,
 )
 
 
@@ -99,6 +99,10 @@ def main():
             english, pinyin, pos_tags, alts = "", "", [], []
         pos_cache[w] = pos_tags
         definition = build_definition(english, alts)
+        new_def, removed = remove_pinyin_from_definition(definition, pinyin)
+        if removed:
+            print(f"  \u26a0 Pinyin lookalike in {w} ({pinyin}): removed {removed}")
+            definition = new_def
         dictionary[w] = (pinyin, definition, pos_tags)
         time.sleep(0.2)
 
@@ -153,6 +157,10 @@ def main():
                 char_fetched += 1
                 time.sleep(0.3)
             definition = build_definition(english, alts)
+            new_def, removed = remove_pinyin_from_definition(definition, pinyin)
+            if removed:
+                print(f"    \u26a0 Pinyin lookalike in {ch} ({pinyin}): removed {removed}")
+                definition = new_def
             char_lines.append(f"{ch} | {pinyin} | {definition}")
             print(f"    + {ch}  {pinyin:10} {definition:40} [{', '.join(pos_tags)}]")
 

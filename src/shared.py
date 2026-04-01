@@ -8,16 +8,17 @@ import urllib.request
 
 # ── Constants ────────────────────────────────────────────────────────────────
 
-DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
-CACHE_DIR = os.path.join(os.path.dirname(__file__), "cache")
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(PROJECT_ROOT, "data")
+CACHE_DIR = os.path.join(PROJECT_ROOT, "cache")
 
 JSON_FILE = os.path.join(DATA_DIR, "myhsk1_data.json")
 POS_CACHE_FILE = os.path.join(CACHE_DIR, "pos_cache.json")
 CHAR_INFO_CACHE_FILE = os.path.join(CACHE_DIR, "char_info_cache.json")
-NEVER_PROPOSE_FILE = "never_propose_words.txt"
-FIXES_FILE = "fixes.json"
-PICK_FILE = "pick_words.txt"
-NEWWORDS_DIR = "newwords"
+NEVER_PROPOSE_FILE = os.path.join(PROJECT_ROOT, "never_propose_words.txt")
+FIXES_FILE = os.path.join(PROJECT_ROOT, "fixes.json")
+PICK_FILE = os.path.join(PROJECT_ROOT, "pick_words.txt")
+NEWWORDS_DIR = os.path.join(PROJECT_ROOT, "newwords")
 
 POS_KEEP = {"noun", "verb", "adjective", "adverb"}
 PRESERVE_TAGS = {"leech", "lesson"}
@@ -109,6 +110,66 @@ def build_definition(english, alternatives, max_total=5):
             if len(parts) >= max_total:
                 break
     return ", ".join(parts)
+
+
+# ── Pinyin lookalike detection ───────────────────────────────────────────
+
+_TONE_MAP = str.maketrans(
+    "āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ",
+    "aaaaeeeeiiiioooouuuuüüüü",
+)
+
+# English words that coincidentally look like pinyin — never remove these
+_PINYIN_SAFE_ENGLISH = {
+    "a", "ah", "an", "as", "at", "be", "by", "do", "go", "ha", "he",
+    "in", "is", "it", "la", "ma", "me", "my", "no", "of", "oh", "on",
+    "or", "pa", "so", "to", "up", "us", "we", "you",
+    "ban", "bang", "bee", "bun", "can", "den", "die", "dun",
+    "fan", "fang", "fee", "fun", "gang", "gun", "hang", "hen",
+    "lie", "long", "man", "men", "nun", "pan", "pen", "pie",
+    "pin", "pun", "ran", "rang", "run", "sang", "see", "she",
+    "sin", "song", "sun", "tan", "tang", "ten", "tie", "tin", "van", "wan",
+}
+
+
+def strip_pinyin_tones(pinyin):
+    """Remove tone marks and tone numbers from pinyin, lowercase, collapse spaces."""
+    p = pinyin.lower().translate(_TONE_MAP)
+    p = re.sub(r'[0-5]', '', p)
+    return re.sub(r'\s+', '', p)
+
+
+def remove_pinyin_from_definition(english, pinyin):
+    """Remove English words that match the pinyin romanization (spoils flashcard answers).
+
+    Returns (cleaned_english, list_of_removed_words).
+    """
+    if not english or not pinyin:
+        return english, []
+    stripped = strip_pinyin_tones(pinyin)
+    if not stripped:
+        return english, []
+
+    removed = []
+    parts = [p.strip() for p in english.split(",")]
+    cleaned = []
+
+    for part in parts:
+        if not part:
+            continue
+        words = part.split()
+        kept = []
+        for w in words:
+            if w.lower() == stripped and w.lower() not in _PINYIN_SAFE_ENGLISH:
+                removed.append(w)
+            else:
+                kept.append(w)
+        if kept:
+            cleaned.append(" ".join(kept))
+
+    if removed:
+        return ", ".join(cleaned), removed
+    return english, []
 
 
 def lookup_pos(word, pos_cache):

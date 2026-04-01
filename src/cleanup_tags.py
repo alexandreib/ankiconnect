@@ -21,15 +21,15 @@ import re
 import time
 
 from shared import (
-    JSON_FILE, PICK_FILE, PRESERVE_TAGS,
+    JSON_FILE, PICK_FILE, PRESERVE_TAGS, PROJECT_ROOT,
     is_cjk, load_deck_records, save_deck_records,
     load_pos_cache, save_pos_cache,
     load_char_info_cache, save_char_info_cache,
     load_never_propose, load_fixes, lookup_full,
-    google_translate, build_definition,
+    google_translate, build_definition, remove_pinyin_from_definition,
 )
 
-BACKUP_FILE = os.path.join(os.path.dirname(__file__), "data", "myhsk1_data.bak.json")
+BACKUP_FILE = os.path.join(PROJECT_ROOT, "data", "myhsk1_data.bak.json")
 
 # Words to ignore when comparing English definitions for similarity
 STOP_WORDS = {
@@ -364,6 +364,26 @@ def main():
         else:
             print("  No similar definitions found.")
 
+    # ── Step 4c: Remove pinyin lookalikes from definitions ───────────────
+    if do_translation:
+        pinyin_cleaned = 0
+        for r in records:
+            if not in_scope(r) or is_lesson(r):
+                continue
+            eng = r["fields"].get("English", "")
+            pin = r["fields"].get("Pinyin", "")
+            if eng and pin:
+                new_eng, removed = remove_pinyin_from_definition(eng, pin)
+                if removed:
+                    chinese = r["fields"].get("中文", "")
+                    print(f"  ⚠ Pinyin lookalike in {chinese} ({pin}): removed {removed} → \"{new_eng}\"")
+                    r["fields"]["English"] = new_eng
+                    pinyin_cleaned += 1
+        if pinyin_cleaned:
+            print(f"  Cleaned {pinyin_cleaned} pinyin lookalike(s) from definitions")
+        else:
+            print("  No pinyin lookalikes found.")
+
     # ── Step 5: Decompose multi-char words ───────────────────────────────
     existing_chars = {r["fields"].get("中文", "") for r in records}
     never_propose = load_never_propose()
@@ -427,6 +447,7 @@ def main():
         else:
             print(f"  Definitions enriched: {enriched}")
         print(f"  Similar pairs found: {len(similarity_warnings)}, auto-fixed: {similarity_fixed}")
+        print(f"  Pinyin lookalikes removed: {pinyin_cleaned}")
     if do_tags:
         print(f"  Tags changed: {tags_changed}")
     print(f"  Google lookups: {fetched} (cache: {initial_cache_size} → {len(pos_cache)})")

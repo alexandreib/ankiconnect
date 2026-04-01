@@ -23,12 +23,12 @@ import sys
 from urllib.request import urlopen, Request
 from urllib.error import URLError
 
-from shared import strip_html, load_pos_cache, PICK_FILE, JSON_FILE
+from shared import strip_html, load_pos_cache, PICK_FILE, JSON_FILE, PROJECT_ROOT
 
 ANKI_CONNECT_URL = "http://localhost:8765"
 DECK_NAME = "myhsk1"
-BACKUP_FILE = os.path.join(os.path.dirname(__file__), "data", "myhsk1_data.bak.json")
-CSV_FILE = os.path.join(os.path.dirname(__file__), "data", "myhsk1_data.csv")
+BACKUP_FILE = os.path.join(PROJECT_ROOT, "data", "myhsk1_data.bak.json")
+CSV_FILE = os.path.join(PROJECT_ROOT, "data", "myhsk1_data.csv")
 
 
 def anki_request(action, **params):
@@ -79,13 +79,22 @@ def export_deck(fmt):
         _save_json(records)
 
 
+HISTORY_DIR = os.path.join(PROJECT_ROOT, "data", "history")
+
+
 def _save_json(records):
     with open(JSON_FILE, "w", encoding="utf-8") as f:
         json.dump(records, f, ensure_ascii=False, indent=2)
     # Save a backup for diff-based import
     import shutil
     shutil.copy2(JSON_FILE, BACKUP_FILE)
+    # Save a dated historical backup (one per day)
+    os.makedirs(HISTORY_DIR, exist_ok=True)
+    from datetime import date
+    history_file = os.path.join(HISTORY_DIR, f"myhsk1_data_{date.today():%Y%m%d}.json")
+    shutil.copy2(JSON_FILE, history_file)
     print(f"Exported {len(records)} notes to {JSON_FILE}")
+    print(f"  Historical backup: {history_file}")
 
 
 def _save_csv(records):
