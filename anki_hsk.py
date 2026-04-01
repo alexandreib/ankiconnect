@@ -60,13 +60,14 @@ def export_deck(fmt):
 
     # Build a clean list of dicts, stripping HTML from fields (except Comment)
     records = []
+    preserve_fields = {"Comment", "my_english"}
     for note in notes_info:
         record = {
             "noteId": note["noteId"],
             "modelName": note["modelName"],
             "tags": note["tags"],
             "fields": {
-                name: val["value"] if name == "Comment" else strip_html(val["value"])
+                name: val["value"] if name in preserve_fields else strip_html(val["value"])
                 for name, val in note["fields"].items()
             },
         }
@@ -291,7 +292,7 @@ def pick_words():
         if len(chinese) == 1:
             tags.append("single")
         elif len(chinese) == 2:
-            tags.append("double")
+            tags.append("dual")
         # Add POS tags from cache
         for t in pos_cache.get(chinese, []):
             if t not in tags:
@@ -300,7 +301,7 @@ def pick_words():
             anki_request("addNote", note={
                 "deckName": DECK_NAME,
                 "modelName": "Basic",
-                "fields": {"中文": chinese, "English": english, "Pinyin": pinyin, "Comment": ""},
+                "fields": {"中文": chinese, "English": english, "my_english": "", "Pinyin": pinyin, "Comment": ""},
                 "tags": tags,
                 "options": {"allowDuplicate": False},
             })

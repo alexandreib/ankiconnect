@@ -155,8 +155,8 @@ def main():
     parser = argparse.ArgumentParser(description="Clean up myhsk1_data.json")
     parser.add_argument("--mode", choices=["translation", "retranslate", "tags", "all"], default="all",
                         help="What to update: translation (enrich short), retranslate (replace all), tags, or all (default: all)")
-    parser.add_argument("--scope", choices=["new", "existing", "all"], default="all",
-                        help="Which words to process: new, existing, or all (default: all)")
+    parser.add_argument("--scope", choices=["new", "existing", "empty", "all"], default="all",
+                        help="Which words to process: new, existing, empty (no English), or all (default: all)")
     args = parser.parse_args()
 
     do_translation = args.mode in ("translation", "retranslate", "all")
@@ -178,6 +178,8 @@ def main():
     def in_scope(record):
         if args.scope == "all":
             return True
+        if args.scope == "empty":
+            return not record["fields"].get("English", "").strip()
         note_id = record.get("noteId")
         if args.scope == "existing":
             return note_id in backup_ids
@@ -224,31 +226,39 @@ def main():
     tags_changed = 0
     enriched = 0
     retranslated = 0
+    pinyin_filled = 0
     for i, r in enumerate(records, 1):
         chinese = r["fields"].get("中文", "")
         eng = r["fields"].get("English", "")
+        pin = r["fields"].get("Pinyin", "")
         scoped = in_scope(r)
         lesson = is_lesson(r)
         needs_retranslate = do_retranslate and scoped and not lesson and chinese
         needs_enrich = (do_translation and not do_retranslate and scoped and not lesson
                         and eng and "," not in eng and len(eng.split()) <= 3)
+        needs_pinyin = do_translation and scoped and not lesson and chinese and not pin.strip()
 
-        if chinese in pos_cache and not needs_enrich and not needs_retranslate:
+        if chinese in pos_cache and not needs_enrich and not needs_retranslate and not needs_pinyin:
             # POS cached & definition doesn't need work — skip API call
             pos_tags = pos_cache[chinese]
         else:
             # Full API call: get POS + alternatives in one request
             try:
-                gt_eng, _pin, pos_tags, alts = google_translate(chinese)
+                gt_eng, gt_pin, pos_tags, alts = google_translate(chinese)
             except RuntimeError as e:
                 print(f"  ✗ {e}")
                 pos_tags = pos_cache.get(chinese, [])
                 gt_eng = ""
+                gt_pin = ""
                 alts = []
             if chinese not in pos_cache:
                 pos_cache[chinese] = pos_tags
                 fetched += 1
                 time.sleep(0.3)
+            # Fill empty Pinyin
+            if needs_pinyin and gt_pin:
+                r["fields"]["Pinyin"] = gt_pin
+                pinyin_filled += 1
             # Retranslate: replace entire definition with fresh Google Translate
             if needs_retranslate and gt_eng:
                 new_eng = build_definition(gt_eng, alts)
@@ -271,8 +281,8 @@ def main():
             # Character count tags
             if len(chinese) == 1 and "single" not in new_tags:
                 new_tags.append("single")
-            elif len(chinese) == 2 and "double" not in new_tags:
-                new_tags.append("double")
+            elif len(chinese) == 2 and "dual" not in new_tags:
+                new_tags.append("dual")
 
             if sorted(new_tags) != sorted(r["tags"]):
                 tags_changed += 1
@@ -411,6 +421,7 @@ def main():
     print(f"  Fixes applied: {fixes_applied}")
     print(f"  '(1 char)' stripped: {stripped}")
     if do_translation:
+        print(f"  Pinyin filled: {pinyin_filled}")
         if do_retranslate:
             print(f"  Definitions retranslated: {retranslated}")
         else:

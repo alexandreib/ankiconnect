@@ -743,5 +743,44 @@
       "everywhere",
       "time"
     ]
+  },
+  "编": {
+    "english": "compile",
+    "pinyin": "Biān",
+    "pos": [
+      "verb",
+      "noun"
+    ],
+    "alts": [
+      "edit",
+      "arrange",
+      "weave",
+      "write",
+      "make up",
+      "plait",
+      "compose",
+      "fabricate",
+      "invent",
+      "organize",
+      "tress",
+      "group",
+      "book",
+      "volume",
+      "copy",
+      "part of a book"
+    ]
+  },
+  "完": {
+    "english": "over",
+    "pinyin": "Wán",
+    "pos": [
+      "adjective",
+      "verb"
+    ],
+    "alts": [
+      "complete",
+      "whole",
+      "finish"
+    ]
   }
 }

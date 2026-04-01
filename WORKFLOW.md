@@ -18,7 +18,8 @@ Anki must be running with the AnkiConnect plugin installed (default port 8765).
 | `anki_hsk.py` | AnkiConnect operations: export / import / pick / models |
 | `cleanup_tags.py` | Clean deck data: enrich definitions, POS tags, auto-fix similar definitions, decompose multi-char words |
 | `generate_new_words.py` | Extract new vocabulary from `.pptx` / `.doc` / `.txt` → `pick_words.txt` |
-| `go.py` | One-command: export deck then generate pick list |
+| `go.py` | Shortcut: export deck then generate pick list |
+| `clean_empty.py` | Shortcut: export → translate empty cards → tags → import |
 | `never_propose_words.txt` | Characters / words to exclude from proposals (supports `char` or `char \| pinyin \| english`) |
 | `pick_words.txt` | Human-editable word list (intermediate, generated) |
 | `data/` | Deck data: `myhsk1_data.json`, `.bak.json`, `.csv` |
@@ -28,26 +29,35 @@ Anki must be running with the AnkiConnect plugin installed (default port 8765).
 
 ---
 
-## Workflow 1 — Add New Words
+## Main workflow
 
-Drop `.pptx`, `.doc`, or `.txt` files into `newwords/`, then:
+Every session starts with an **export** and ends with an **import**. In between, pick optional steps as needed.
 
 ```
-python go.py                  # 1. Export deck + generate pick_words.txt
-                              #    (also decomposes single chars + collision warnings)
-# edit pick_words.txt         # 2. Delete unwanted lines, fix definitions
-python anki_hsk.py pick       # 3. Add remaining words to Anki
-python cleanup_tags.py        # 4. (optional) Enrich definitions & set POS tags
-python anki_hsk.py import     # 5. (optional) Push enriched data back to Anki
+python anki_hsk.py export         # 1. Always first — export deck → myhsk1_data.json
+
+# ── Optional: add new words ─────────────────────────────────────────
+python generate_new_words.py      # 2a. Extract words from newwords/ → pick_words.txt
+# edit pick_words.txt             # 2b. Delete unwanted lines, fix definitions
+python anki_hsk.py pick           # 2c. Add remaining words to Anki
+
+# ── Optional: clean up ──────────────────────────────────────────────
+python cleanup_tags.py            # 3.  Enrich definitions + set POS/count tags
+                                  #     (writes missing single chars to pick_words.txt)
+# edit pick_words.txt             # 3b. (if single chars were found) keep wanted chars
+python anki_hsk.py pick           # 3c. (if single chars were found) add them
+
+python anki_hsk.py import         # 4. Always last — push changes back to Anki
 ```
 
 | Step | Command | What it does |
 |------|---------|--------------|
-| 1 | `python go.py` | Exports current deck to `myhsk1_data.json`, extracts new words from `newwords/`, looks up pinyin/English/POS via Google Translate, decomposes multi-char words into single-char candidates, writes everything to `pick_words.txt`, warns about definition collisions |
-| 2 | *(manual)* | Open `pick_words.txt` — delete lines you don't want, fix pinyin/translations. Lines starting with `#` are ignored. To permanently exclude entries, add them to `never_propose_words.txt` |
-| 3 | `python anki_hsk.py pick` | Reads `pick_words.txt` and adds each remaining entry as a new Anki card (with POS tags from cache) |
-| 4 | `python cleanup_tags.py` | *(optional)* Enriches short definitions (with similarity warnings), sets POS tags, adds `single`/`double` tags, decomposes any new multi-char words |
-| 5 | `python anki_hsk.py import` | *(optional)* Pushes the enriched `myhsk1_data.json` back into Anki |
+| 1 | `python anki_hsk.py export` | Dumps deck to `myhsk1_data.json` (+ backup `.bak.json`). Always run first. |
+| 2a | `python generate_new_words.py` | *(optional)* Extracts new words from `newwords/`, looks up pinyin/English/POS, decomposes multi-char words, writes `pick_words.txt`, warns about collisions |
+| 2b | *(manual)* | Open `pick_words.txt` — delete lines you don't want, fix pinyin/translations. `#` = comment. Permanent exclusions go in `never_propose_words.txt` |
+| 2c | `python anki_hsk.py pick` | *(optional)* Reads `pick_words.txt` and adds each entry as a new Anki card |
+| 3 | `python cleanup_tags.py` | *(optional)* Enriches short definitions, auto-fixes similar definitions, sets POS tags, adds `single`/`dual` tags, decomposes multi-char words → missing single chars to `pick_words.txt`. See [options](#cleanup_tagspy-options) below |
+| 4 | `python anki_hsk.py import` | Pushes updated fields + tags back to Anki (only changed notes are sent). Always run last. |
 
 > **Input formats for `newwords/`:**
 > - `.pptx` / `.doc` — Chinese segments are extracted and filtered against known-good characters
@@ -55,44 +65,39 @@ python anki_hsk.py import     # 5. (optional) Push enriched data back to Anki
 
 ---
 
-## Workflow 2 — Clean Up Existing Deck
+## Shortcuts
 
-No new words — just fix definitions, tags, and extract missing single chars:
+| Command | Equivalent to | Use when |
+|---------|--------------|----------|
+| `python go.py` | export → generate_new_words | You dropped files in `newwords/` and want a pick list |
+| `python clean_empty.py` | export → retranslate empty → tags → import | You have cards with Chinese but no English |
 
-```
-python anki_hsk.py export     # 1. Export deck to myhsk1_data.json
-python cleanup_tags.py        # 2. Clean up: enrich, tag, decompose
-python anki_hsk.py import     # 3. Push changes back to Anki
-# edit pick_words.txt         # 4. (if single chars were found)
-python anki_hsk.py pick       # 5. (if single chars were found)
-```
+---
 
-| Step | Command | What it does |
-|------|---------|--------------|
-| 1 | `python anki_hsk.py export` | Dumps current deck to `myhsk1_data.json` (+ backup `.bak.json`) |
-| 2 | `python cleanup_tags.py` | Applies `fixes.json` (if present), strips `(1 char)` from English, enriches short definitions (≤3 words, no commas) with Google Translate alternatives, **warns about similar English definitions**, sets POS tags (verb/noun/adjective/adverb), adds `single` tag for 1-char words and `double` tag for 2-char words, preserves `leech` and `lesson` tags, decomposes multi-char words → missing single chars written to `pick_words.txt` |
-| 3 | `python anki_hsk.py import` | Pushes updated fields + tags back into Anki (only changed notes are updated) |
-| 4 | *(manual)* | If `pick_words.txt` was generated, edit it to keep wanted single chars |
-| 5 | `python anki_hsk.py pick` | Adds the selected single chars to Anki |
-
-> First run fetches POS + alternatives from Google (~7 min for ~1400 words). Results are cached in `pos_cache.json` and `char_info_cache.json` — re-runs are instant.
-
-### cleanup_tags.py options
+## cleanup_tags.py options
 
 `cleanup_tags.py` supports `--mode` and `--scope` flags to run selectively:
 
 | Flag | Values | Default | Description |
 |------|--------|---------|-------------|
 | `--mode` | `translation`, `retranslate`, `tags`, `all` | `all` | What to update |
-| `--scope` | `new`, `existing`, `all` | `all` | Which words to process (new = not in backup, existing = in backup) |
+| `--scope` | `new`, `existing`, `empty`, `all` | `all` | Which words to process |
+
+**Scope values:**
+- `all` — Every card
+- `new` — Cards not in the backup (added since last export)
+- `existing` — Cards present in the backup
+- `empty` — Cards with no English definition (Chinese-only)
 
 **Examples:**
 
 ```bash
-python cleanup_tags.py --mode translation              # Enrich short definitions (all words)
+python cleanup_tags.py                                 # Enrich + tags for all words (default)
+python cleanup_tags.py --mode translation              # Enrich short definitions only
 python cleanup_tags.py --mode retranslate              # Replace ALL definitions with fresh Google Translate
-python cleanup_tags.py --mode retranslate --scope new  # Replace definitions for new words only
-python cleanup_tags.py --mode tags                     # Update tags only (all words)
+python cleanup_tags.py --mode retranslate --scope new  # Retranslate new words only
+python cleanup_tags.py --mode retranslate --scope empty # Translate cards with no English
+python cleanup_tags.py --mode tags                     # Update tags only
 python cleanup_tags.py --mode tags --scope existing    # Update tags for existing words only
 ```
 
@@ -104,7 +109,9 @@ python cleanup_tags.py --mode tags --scope existing    # Update tags for existin
 
 **Similarity auto-fix:** When updating translations (`--mode translation` or `--mode all`), the script compares English definitions across all cards. Pairs sharing ≥50% of meaningful words are detected and automatically differentiated by fetching fresh Google Translate alternatives and preferring unique words that don't appear in the conflicting card's definition. Pairs that can't be improved are still reported.
 
-**Character count tags:** All cards receive a `single` (1-char) or `double` (2-char) tag automatically.
+**Character count tags:** All cards receive a `single` (1-char) or `dual` (2-char) tag automatically.
+
+> First run fetches POS + alternatives from Google (~7 min for ~1400 words). Results are cached in `pos_cache.json` and `char_info_cache.json` — re-runs are instant.
 
 ---
 

@@ -3,3 +3,6 @@
 # Lines starting with # are ignored.
 # Format: 中文 | Pinyin | English
 
+
+# ── Single characters (decomposed from multi-char words) ──
+完 | Wán | over, complete, whole, finish
